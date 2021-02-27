@@ -24,7 +24,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form"> تعديل وسيلة توصيل </h4>
+                                    <h4 class="card-title" id="basic-layout-form"> تعديل  وسيلة توصيل </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -40,20 +40,20 @@
                                 @include('dashboard.includes.alerts.errors')
                                 <div class="card-content collapse show">
                                     <div class="card-body">
-                                        <form class="form"
-                                              action="{{route('update.shippings.methods',$shippingMethod -> id)}}"
+                                        <form class="form" action="{{route('update.shippings.methods',$shippingMethod -> id)}}"
                                               method="post"
                                               enctype="multipart/form-data">
                                             @csrf
                                             @method('PUT')
                                             <input type="hidden" name="id" value="{{$shippingMethod -> id}}">
+
                                             <div class="form-body">
+
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> الاسم </label>
-                                                            <input type="text" value="{{$shippingMethod -> value  }}"
-                                                                   id="name"
+                                                            <input type="text" value="{{$shippingMethod -> value  }}" id="name"
                                                                    class="form-control"
                                                                    placeholder="  "
                                                                    name="value">
@@ -62,12 +62,11 @@
                                                             @enderror
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> قيمه التوصيل </label>
-                                                            <input type="number"
-                                                                   value="{{$shippingMethod -> plain_value}}"
-                                                                   id="plain_value"
+                                                            <input type="number" value="{{$shippingMethod -> plain_value}}" id="plain_value"
                                                                    class="form-control"
                                                                    placeholder="  "
                                                                    name="plain_value">
@@ -76,8 +75,12 @@
                                                             @enderror
                                                         </div>
                                                     </div>
+
                                                 </div>
+
+
                                             </div>
+
                                             <div class="form-actions">
                                                 <button type="button" class="btn btn-warning mr-1"
                                                         onclick="history.back();">

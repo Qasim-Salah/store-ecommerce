@@ -23,7 +23,6 @@ class Setting extends Model
             self::set($key, $value);
         }
     }
-
     //  defaultlocal , ar
     public static function set($key, $value)
     {
@@ -37,7 +36,6 @@ class Setting extends Model
 
         static::updateOrCreate(['key' => $key], ['plain_value' => $value]);
     }
-
 
     public static function setTranslatableSettings($settings = [])
     {
