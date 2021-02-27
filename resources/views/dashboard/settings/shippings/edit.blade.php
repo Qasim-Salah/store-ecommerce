@@ -52,10 +52,10 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> الاسم </label>
-                                                            <input type="text" value="{{$shippingMethod -> value}}"
+                                                            <input type="text" value="{{$shippingMethod -> value  }}"
                                                                    id="name"
                                                                    class="form-control"
-                                                                   placeholder=" "
+                                                                   placeholder="  "
                                                                    name="value">
                                                             @error("value")
                                                             <span class="text-danger">{{$message}}</span>
@@ -64,14 +64,15 @@
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> قيمة التوصيل </label>
+                                                            <label for="projectinput1"> قيمه التوصيل </label>
                                                             <input type="number"
-                                                                   value="{{$shippingMethod-> plain_value}}" id="name"
+                                                                   value="{{$shippingMethod -> plain_value}}"
+                                                                   id="plain_value"
                                                                    class="form-control"
-                                                                   placeholder=""
+                                                                   placeholder="  "
                                                                    name="plain_value">
-                                                            @error('plain_value')
-                                                            <span class="text-danger"> {{$message}}</span>
+                                                            @error("plain_value")
+                                                            <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
                                                     </div>
@@ -97,4 +98,6 @@
             </div>
         </div>
     </div>
+
+
 @stop

@@ -19,21 +19,28 @@ class SettingsController extends Controller
         if ($type === 'free')
             $shippingMethod = SettingModel::where('key', 'free_shipping_label')->first();
 
+
         elseif ($type === 'inner')
             $shippingMethod = SettingModel::where('key', 'local_label')->first();
-
 
         elseif ($type === 'outer')
             $shippingMethod = SettingModel::where('key', 'outer_label')->first();
         else
             $shippingMethod = SettingModel::where('key', 'free_shipping_label')->first();
 
+
         return view('dashboard.settings.shippings.edit', compact('shippingMethod'));
 
     }
 
+
     public function updateShippingMethods(ShippingsRequest $request, $id)
     {
+
+        //validation
+
+        //update db
+
         try {
             $shipping_method = SettingModel::find($id);
 
