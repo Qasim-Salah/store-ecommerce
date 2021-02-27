@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\DB;
 
 class SettingsController extends Controller
 {
-
     public function editShippingMethods($type)
     {
 
@@ -28,7 +27,6 @@ class SettingsController extends Controller
         else
             $shippingMethod = SettingModel::where('key', 'free_shipping_label')->first();
 
-
         return view('dashboard.settings.shippings.edit', compact('shippingMethod'));
 
     }
@@ -43,12 +41,11 @@ class SettingsController extends Controller
 
         try {
             $shipping_method = SettingModel::find($id);
-
             DB::beginTransaction();
             $shipping_method->update(['plain_value' => $request->plain_value]);
             //save translations
             $shipping_method->value = $request->value;
-            $shipping_method->save();
+            $shipping_method->update();
 
             DB::commit();
             return redirect()->back()->with(['success' => 'تم التحديث بنجاح']);
