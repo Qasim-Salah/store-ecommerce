@@ -22,8 +22,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
         Route::get('/', 'DashboardController@index')->name('admin.dashboard');
         Route::group(['prefix' => 'setting'], function () {
 
-            Route::get('/shipping-methods/{type}', 'SettingsController@editShippingMethods')->name('edit.shippings.methods');
-            Route::put('/shipping-methods/{id}', 'SettingsController@updateShippingMethods')->name('update.shippings.methods');
+            Route::get('shipping-methods/{type}', 'SettingsController@editShippingMethods')->name('edit.shippings.methods');
+            Route::put('shipping-methods/{id}', 'SettingsController@updateShippingMethods')->name('update.shippings.methods');
         });
     });
 //    'middleware' => 'guest:admin'
