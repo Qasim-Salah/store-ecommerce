@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
 /*
@@ -26,6 +27,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
 
             Route::get('shipping-methods/{type}', 'SettingsController@editShippingMethods')->name('edit.shippings.methods');
             Route::put('shipping-methods/{id}', 'SettingsController@updateShippingMethods')->name('update.shippings.methods');
+        });
+        Route::group(['prefix' => 'profile'], function () {
+            Route::get('edit', 'ProfileController@edit')->name('edit.profile');
+            Route::put('update', 'ProfileController@update')->name('update.profile');
         });
     });
 //    'middleware' => 'guest:admin'
