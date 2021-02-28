@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/test', function () {
-    return view('layouts.admin');
+    return \App\Models\Setting::find(13);
 });
