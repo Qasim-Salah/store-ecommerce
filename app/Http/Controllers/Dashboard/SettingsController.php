@@ -42,9 +42,11 @@ class SettingsController extends Controller
         try {
             $shipping_method = SettingModel::find($id);
             DB::beginTransaction();
+
             $shipping_method->update(['plain_value' => $request->plain_value]);
             //save translations
-            $shipping_method->value=$request->value ;
+
+            $shipping_method->value = $request->value;
             $shipping_method->save();
 
             DB::commit();

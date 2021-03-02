@@ -9,7 +9,7 @@ class Setting extends Model
 {
     use Translatable;
 
-    protected $with = ['translation'];
+    protected $with = ['translations'];
 
     protected $translatedAttributes = ['value'];
 

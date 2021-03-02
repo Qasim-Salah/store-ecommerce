@@ -32,6 +32,27 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
             Route::get('edit', 'ProfileController@edit')->name('edit.profile');
             Route::put('update', 'ProfileController@update')->name('update.profile');
         });
+        ################################## categories routes ######################################
+        Route::group(['prefix' => 'main_categories'], function () {
+            Route::get('/', 'MainCategoriesController@index')->name('admin.mainCategories');
+            Route::get('create', 'MainCategoriesController@create')->name('admin.mainCategories.create');
+            Route::post('store', 'MainCategoriesController@store')->name('admin.mainCategories.store');
+            Route::get('edit/{id}', 'MainCategoriesController@edit')->name('admin.mainCategories.edit');
+            Route::post('update/{id}', 'MainCategoriesController@update')->name('admin.mainCategories.update');
+            Route::get('delete/{id}', 'MainCategoriesController@destroy')->name('admin.mainCategories.delete');
+        });
+
+        ################################## end categories    #######################################
+
+        ################################## sub categories routes ######################################
+        Route::group(['prefix' => 'sub_categories'], function () {
+            Route::get('/', 'SubCategoriesController@index')->name('admin.subCategories');
+            Route::get('create', 'SubCategoriesController@create')->name('admin.subCategories.create');
+            Route::post('store', 'SubCategoriesController@store')->name('admin.subCategories.store');
+            Route::get('edit/{id}', 'SubCategoriesController@edit')->name('admin.subCategories.edit');
+            Route::post('update/{id}', 'SubCategoriesController@update')->name('admin.subCategories.update');
+            Route::get('delete/{id}', 'SubCategoriesController@destroy')->name('admin.subCategories.delete');
+        });
     });
 //    'middleware' => 'guest:admin'
     Route::group(['prefix' => 'admin', 'namespace' => 'Dashboard',], function () {
