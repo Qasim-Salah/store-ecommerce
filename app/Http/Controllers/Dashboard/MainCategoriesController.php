@@ -17,7 +17,7 @@ class MainCategoriesController extends Controller
 
     public function create()
     {
-        $categories = CategoryModel::select('id', 'parent_id')->get();
+        $categories = CategoryModel::select('id', 'parent_id')->orderBy('id', 'DESC')->get();
         return view('dashboard.categories.create', compact('categories'));
     }
 
@@ -31,15 +31,15 @@ class MainCategoriesController extends Controller
                 $request->request->add(['is_active' => 0]);
             else
                 $request->request->add(['is_active' => 1]);
-//
-//            //if user choose main category then we must remove paret id from the request
-//
-//            if ($request->type == CategoryModelType::mainCategory) //main category
-//            {
-//                $request->request->add(['parent_id' => null]);
-//            }
-//
-//            //if he choose child category we mus t add parent id
+
+            //if user choose main category then we must remove paret id from the request
+
+            if ($request->type == 1) //main category
+            {
+                $request->request->add(['parent_id' => null]);
+            }
+
+            //if he choose child category we mus t add parent id
 
             $category = CategoryModel::create($request->except('_token'));
 
@@ -47,9 +47,8 @@ class MainCategoriesController extends Controller
             $category->name = $request->name;
             $category->save();
 
-            return redirect()->route('admin.mainCategories')->with(['success' => 'تم ألاضافة بنجاح']);
             DB::commit();
-
+            return redirect()->route('admin.mainCategories')->with(['success' => 'تم ألاضافة بنجاح']);
         } catch (\Exception $ex) {
             DB::rollback();
             return redirect()->route('admin.mainCategories')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
