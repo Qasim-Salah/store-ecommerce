@@ -52,11 +52,12 @@
                                             <input type="hidden" name="product_id" value="{{$id}}">
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i> البيانات الاساسية للمنتج   </h4>
+                                                <h4 class="form-section"><i class="ft-home"></i> البيانات الاساسية
+                                                    للمنتج </h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> سعر  المنتج
+                                                            <label for="projectinput1"> سعر المنتج
                                                             </label>
                                                             <input type="number" id="price"
                                                                    class="form-control"
@@ -90,7 +91,8 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1">نوع السعر
                                                             </label>
-                                                            <select name="special_price_type" class="select2 form-control" multiple>
+                                                            <select name="special_price_type"
+                                                                    class="select2 form-control" multiple>
                                                                 <optgroup label="من فضلك أختر النوع ">
                                                                     <option value="percent">precent</option>
                                                                     <option value="fixed">fixed</option>
@@ -106,7 +108,7 @@
                                                 </div>
 
 
-                                                <div class="row" >
+                                                <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> تاريخ البداية
@@ -126,7 +128,7 @@
 
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> تاريخ البداية
+                                                            <label for="projectinput1"> تاريخ النهاية
                                                             </label>
                                                             <input type="date" id="price"
                                                                    class="form-control"
@@ -173,13 +175,13 @@
 
     <script>
         $('input:radio[name="type"]').change(
-            function(){
+            function () {
                 if (this.checked && this.value == '2') {  // 1 if main cat - 2 if sub cat
                     $('#cats_list').removeClass('hidden');
 
-                }else{
+                } else {
                     $('#cats_list').addClass('hidden');
                 }
             });
     </script>
-    @stop
+@stop

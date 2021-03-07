@@ -80,8 +80,6 @@
                                                     </tr>
                                                 @endforeach
                                             @endisset
-
-
                                             </tbody>
                                         </table>
                                         <div class="justify-content-center d-flex">
@@ -92,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    {!! $products -> links() !!}
+                    {!! $products->appends(request()->input())->links() !!}
                 </section>
             </div>
         </div>

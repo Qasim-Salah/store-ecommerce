@@ -48,15 +48,13 @@
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
-
                                             <input type="hidden" name="product_id" value="{{$id}}">
                                             <div class="form-body">
-
-                                                <h4 class="form-section"><i class="ft-home"></i> اداره المستودع   </h4>
+                                                <h4 class="form-section"><i class="ft-home"></i> اداره المستودع </h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> كود  المنتج
+                                                            <label for="projectinput1"> كود المنتج
                                                             </label>
                                                             <input type="text" id="sku"
                                                                    class="form-control"
@@ -68,12 +66,12 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1">تتبع المستودع
                                                             </label>
-                                                            <select name="manage_stock" class="select2 form-control" id="manageStock">
+                                                            <select name="manage_stock" class="select2 form-control"
+                                                                    id="manageStock">
                                                                 <optgroup label="من فضلك أختر النوع ">
                                                                     <option value="1">اتاحة التتبع</option>
                                                                     <option value="0" selected>عدم اتاحه التتبع</option>
@@ -85,20 +83,16 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
                                                 <div class="row">
-                                                  <!-- QTY  -->
-
-
-
+                                                    <!-- QTY  -->
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1">حالة المنتج
                                                             </label>
-                                                            <select name="in_stock" class="select2 form-control" >
+                                                            <select name="in_stock" class="select2 form-control">
                                                                 <optgroup label="من فضلك أختر  ">
                                                                     <option value="1">متاح</option>
-                                                                    <option value="0">غير متاح </option>
+                                                                    <option value="0">غير متاح</option>
                                                                 </optgroup>
                                                             </select>
                                                             @error('in_stock')
@@ -106,9 +100,7 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-
-
-                                                    <div class="col-md-6" style="display:none"  id="qtyDiv">
+                                                    <div class="col-md-6" style="display:none" id="qtyDiv">
                                                         <div class="form-group">
                                                             <label for="projectinput1">الكمية
                                                             </label>
@@ -123,13 +115,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
-
-
                                             </div>
-
-
                                             <div class="form-actions">
                                                 <button type="button" class="btn btn-warning mr-1"
                                                         onclick="history.back();">
@@ -140,7 +126,6 @@
                                                 </button>
                                             </div>
                                         </form>
-
                                     </div>
                                 </div>
                             </div>
@@ -151,18 +136,16 @@
             </div>
         </div>
     </div>
-
 @stop
-
 @section('script')
 
     <script>
-        $(document).on('change','#manageStock',function(){
-           if($(this).val() == 1 ){
+        $(document).on('change', '#manageStock', function () {
+            if ($(this).val() == 1) {
                 $('#qtyDiv').show();
-           }else{
-               $('#qtyDiv').hide();
-           }
+            } else {
+                $('#qtyDiv').hide();
+            }
         });
     </script>
-    @stop
+@stop
