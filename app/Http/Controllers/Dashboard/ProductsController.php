@@ -128,20 +128,19 @@ class ProductsController extends Controller
     public function saveProductImagesDB(ProductImagesRequest $request)
     {
 
-        try {
-            // save dropzone images
-            if ($request->has('document') && count($request->document) > 0) {
-                foreach ($request->document as $image) {
-                    ImageModel::create([
-                        'product_id' => $request->product_id,
-                        'photo' => $image,
-                    ]);
-                }
+        // save dropzone images
+        if ($request->has('document') && count($request->document) > 0) {
+            foreach ($request->document as $image) {
+                ImageModel::create([
+                    'product_id' => $request->product_id,
+                    'photo' => $image,
+                ]);
             }
-
             return redirect()->route('admin.products')->with(['success' => 'تم التحديث بنجاح']);
 
-        } catch (\Exception $ex) {
+        } else {
+
+            return redirect()->route('admin.products')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
 
         }
     }
@@ -153,12 +152,11 @@ class ProductsController extends Controller
         $category = CategoryModel::orderBy('id', 'DESC')->find($id);
 
         if (!$category)
-            return redirect()->route('admin.maincategories')->with(['error' => 'هذا القسم غير موجود ']);
+            return redirect()->route('admin.mainCategories')->with(['error' => 'هذا القسم غير موجود ']);
 
         return view('dashboard.categories.edit', compact('category'));
 
     }
-
 
     public function update($id, MainCategoryRequest $request)
     {

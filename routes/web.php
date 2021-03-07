@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test', function () {
-    return \App\Models\Category::first();
-});
+//Route::get('/', function () {
+//    return view('layouts.site');
+//});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
