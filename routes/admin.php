@@ -102,7 +102,14 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
             Route::post('update/{id}', 'OptionsController@update')->name('admin.options.update');
         });
         ################################## end options    #######################################
+        ################################## sliders ######################################
+        Route::group(['prefix' => 'sliders'], function () {
+            Route::get('/', 'SliderController@addImages')->name('admin.sliders.create');
+            Route::post('images', 'SliderController@saveSliderImages')->name('admin.sliders.images.store');
+            Route::post('images/db', 'SliderController@saveSliderImagesDB')->name('admin.sliders.images.store.db');
 
+        });
+        ################################## end sliders    #######################################
 
     });
 //    'middleware' => 'guest:admin'
