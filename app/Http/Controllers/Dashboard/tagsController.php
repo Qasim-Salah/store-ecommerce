@@ -28,7 +28,9 @@ class tagsController extends Controller
 
             DB::beginTransaction();
 
-            $tag = TagModel::create(['slug' => $request->slug]);
+            $tag = TagModel::create([
+                'slug' => $request->slug
+            ]);
 
             //save translations
             $tag->name = $request->name;

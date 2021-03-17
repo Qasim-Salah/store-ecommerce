@@ -1,4 +1,9 @@
 @extends('layouts.admin')
+
+@section('title')
+
+    الاقسام
+@endsection
 @section('content')
 
     <div class="app-content content">
@@ -62,9 +67,10 @@
                                                     <tr>
                                                         <td>{{$category -> name}}</td>
                                                         <td>{{$category -> _parent -> name  ?? '--' }}</td>
-                                                        <td>{{$category -> slug}}</td>
+                                                        <td></td>
                                                         <td>{{$category -> getActive()}}</td>
-                                                        <td><img style="width: 150px; height: 100px;" src=" "></td>
+                                                        <td><img style="width: 150px; height: 100px;"
+                                                                 src="{{$category -> photo}}"></td>
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
@@ -82,6 +88,7 @@
                                             </tbody>
                                         </table>
                                         <div class="justify-content-center d-flex">
+                                            {!! $categories->appends(request()->input())->links() !!}
                                         </div>
                                     </div>
                                 </div>

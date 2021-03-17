@@ -54,6 +54,12 @@ return [
             'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
+        'mainCategory' => [
+            'driver' => 'local',
+            'root' => public_path('assets/images/mainCategory'),
+            'url' => env('APP_URL') . '/storage',
+            'visibility' => 'public',
+        ],
         'brands' => [
             'driver' => 'local',
             'root' => public_path('/assets/images/brands/'),

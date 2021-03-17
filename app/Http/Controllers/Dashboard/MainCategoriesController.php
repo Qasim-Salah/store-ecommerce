@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Http\Enumerations\CategoryType;
-use App\Http\Requests\MainCategoryRequest;
+use App\Http\Requests\Dashboard\MainCategoryRequest;
+use App\Models\Category;
 use App\Models\Category as CategoryModel;
 use Illuminate\Support\Facades\DB;
 
@@ -29,12 +30,17 @@ class MainCategoriesController extends Controller
             DB::beginTransaction();
 
             if (!$request->has('is_active'))
-                $request->request->add(['is_active' => 0]);
+                $request->request->add(['is_active' => CategoryType::UnActiveCategory]);
             else
-                $request->request->add(['is_active' => 1]);
+                $request->request->add(['is_active' => CategoryType::ActiveCategory]);
+
+            $fileName = "";
+            if ($request->has('photo')) {
+                ###helper###
+                $fileName = uploadImage('mainCategory', $request->photo);
+            }
 
             //if user choose main category then we must remove paret id from the request
-
             if ($request->type == CategoryType::mainCategory) //main category
             {
                 $request->request->add(['parent_id' => null]);
@@ -46,6 +52,7 @@ class MainCategoriesController extends Controller
 
             //save translations
             $category->name = $request->name;
+            $category->photo = $fileName;
             $category->save();
 
             DB::commit();
@@ -57,65 +64,61 @@ class MainCategoriesController extends Controller
 
     }
 
-
     public function edit($id)
     {
 
         //get specific categories and its translations
-        $category = CategoryModel::orderBy('id', 'DESC')->find($id);
-
-        if (!$category)
-            return redirect()->route('admin.mainCategories')->with(['error' => 'هذا القسم غير موجود ']);
+        $category = CategoryModel::orderBy('id', 'DESC')->findorfail($id);
 
         return view('dashboard.categories.edit', compact('category'));
 
     }
 
-
     public function update($id, MainCategoryRequest $request)
     {
         try {
-            //validation
-            //update DB
-            $category = CategoryModel::find($id);
 
-            if (!$category)
-                return redirect()->route('admin.mainCategories')->with(['error' => 'هذا القسم غير موجود']);
+            $category = Category::findorfail($id);
+            DB::beginTransaction();
+
+            if ($request->has('photo')) {
+                $fileName = uploadImage('mainCategory', $request->photo);
+                CategoryModel::where('id', $id)
+                    ->update([
+                        'photo' => $fileName,
+                    ]);
+            }
 
             if (!$request->has('is_active'))
-                $request->request->add(['is_active' => 0]);
+                $request->request->add(['is_active' => CategoryType::UnActiveCategory]);
             else
-                $request->request->add(['is_active' => 1]);
+                $request->request->add(['is_active' => CategoryType::ActiveCategory]);
 
             $category->update($request->all());
 
             //save translations
             $category->name = $request->name;
             $category->save();
-
+            DB::commit();
             return redirect()->route('admin.mainCategories')->with(['success' => 'تم ألتحديث بنجاح']);
         } catch (\Exception $ex) {
+            DB::rollback();
             return redirect()->route('admin.mainCategories')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
         }
+
 
     }
 
-
     public function destroy($id)
     {
-
         //get specific categories and its translations
-        $category = CategoryModel::orderBy('id', 'DESC')->find($id);
+        $category = CategoryModel::orderBy('id', 'DESC')->findorfail($id);
 
-        if (!$category)
-            return redirect()->route('admin.mainCategories')->with(['error' => 'هذا القسم غير موجود ']);
-
-        if ($category->delete()) {
+        if ($category->delete())
 
             return redirect()->route('admin.mainCategories')->with(['success' => 'تم  الحذف بنجاح']);
 
-        } else {
-            return redirect()->route('admin.mainCategories')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
-        }
+        return redirect()->route('admin.mainCategories')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
+
     }
 }
