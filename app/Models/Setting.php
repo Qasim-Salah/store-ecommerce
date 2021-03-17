@@ -9,6 +9,8 @@ class Setting extends Model
 {
     use Translatable;
 
+    protected $table = 'settings';
+
     protected $with = ['translations'];
 
     protected $translatedAttributes = ['value'];
@@ -23,6 +25,7 @@ class Setting extends Model
             self::set($key, $value);
         }
     }
+
     //  defaultlocal , ar
     public static function set($key, $value)
     {

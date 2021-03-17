@@ -1,4 +1,10 @@
 @extends('layouts.admin')
+
+@section('title')
+
+    وسيلة التوصيل
+@endsection
+
 @section('content')
     <div class="app-content content">
         <div class="content-wrapper">
@@ -24,7 +30,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form"> تعديل  وسيلة توصيل </h4>
+                                    <h4 class="card-title" id="basic-layout-form"> تعديل وسيلة توصيل </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -40,7 +46,8 @@
                                 @include('dashboard.includes.alerts.errors')
                                 <div class="card-content collapse show">
                                     <div class="card-body">
-                                        <form class="form" action="{{route('update.shippings.methods',$shippingMethod -> id)}}"
+                                        <form class="form"
+                                              action="{{route('update.shippings.methods',$shippingMethod -> id)}}"
                                               method="post"
                                               enctype="multipart/form-data">
                                             @csrf
@@ -53,7 +60,8 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> الاسم </label>
-                                                            <input type="text" value="{{$shippingMethod -> value  }}" id="name"
+                                                            <input type="text" value="{{$shippingMethod -> value  }}"
+                                                                   id="name"
                                                                    class="form-control"
                                                                    placeholder="  "
                                                                    name="value">
@@ -66,7 +74,9 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> قيمه التوصيل </label>
-                                                            <input type="number" value="{{$shippingMethod -> plain_value}}" id="plain_value"
+                                                            <input type="number"
+                                                                   value="{{$shippingMethod -> plain_value}}"
+                                                                   id="plain_value"
                                                                    class="form-control"
                                                                    placeholder="  "
                                                                    name="plain_value">

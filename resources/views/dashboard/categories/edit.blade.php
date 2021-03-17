@@ -1,4 +1,8 @@
 @extends('layouts.admin')
+@section('title')
+    تعديل الاقسام
+@endsection
+
 @section('content')
 
     <div class="app-content content">
@@ -47,13 +51,19 @@
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
+                                            @method('put')
+
                                             <input name="id" value="{{$category -> id}}" type="hidden">
+
                                             <div class="form-group">
                                                 <div class="text-center">
-                                                    <img src=""
-                                                         class="rounded-circle  height-150" alt="صورة القسم  ">
+                                                    <img
+                                                        src=""
+                                                        class="rounded-circle  height-150" alt="صورة القسم  ">
                                                 </div>
                                             </div>
+
+
                                             <div class="form-group">
                                                 <label> صوره القسم </label>
                                                 <label id="projectinput7" class="file center-block">
@@ -64,6 +74,7 @@
                                                 <span class="text-danger">{{$message}}</span>
                                                 @enderror
                                             </div>
+
                                             <div class="form-body">
 
                                                 <h4 class="form-section"><i class="ft-home"></i> بيانات القسم </h4>
@@ -97,6 +108,11 @@
                                                             @enderror
                                                         </div>
                                                     </div>
+
+
+
+
+
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-6">
@@ -107,7 +123,7 @@
                                                                    class="switchery" data-color="success"
                                                                    @if($category -> is_active == 1)checked @endif/>
                                                             <label for="switcheryColor4"
-                                                                   class="card-title ml-1">الحالة </label>
+                                                                   class="card-title ml-1">الحالة  </label>
 
                                                             @error("is_active")
                                                             <span class="text-danger">{{$message }}</span>
@@ -116,6 +132,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+
 
                                             <div class="form-actions">
                                                 <button type="button" class="btn btn-warning mr-1"

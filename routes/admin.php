@@ -25,8 +25,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
 
         Route::group(['prefix' => 'setting'], function () {
 
-            Route::get('shipping-methods/{type}', 'SettingsController@editShippingMethods')->name('edit.shippings.methods');
-            Route::put('shipping-methods/{id}', 'SettingsController@updateShippingMethods')->name('update.shippings.methods');
+            Route::get('shipping-methods/{type}', 'SettingsController@edit')->name('edit.shippings.methods');
+            Route::put('shipping-methods/{id}', 'SettingsController@update')->name('update.shippings.methods');
         });
         Route::group(['prefix' => 'profile'], function () {
             Route::get('edit', 'ProfileController@edit')->name('edit.profile');
@@ -38,7 +38,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
             Route::get('create', 'MainCategoriesController@create')->name('admin.mainCategories.create');
             Route::post('store', 'MainCategoriesController@store')->name('admin.mainCategories.store');
             Route::get('edit/{id}', 'MainCategoriesController@edit')->name('admin.mainCategories.edit');
-            Route::post('update/{id}', 'MainCategoriesController@update')->name('admin.mainCategories.update');
+            Route::put('update/{id}', 'MainCategoriesController@update')->name('admin.mainCategories.update');
             Route::get('delete/{id}', 'MainCategoriesController@destroy')->name('admin.mainCategories.delete');
         });
 
@@ -102,14 +102,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
             Route::post('update/{id}', 'OptionsController@update')->name('admin.options.update');
         });
         ################################## end options    #######################################
-        ################################## sliders ######################################
-        Route::group(['prefix' => 'sliders'], function () {
-            Route::get('/', 'SliderController@addImages')->name('admin.sliders.create');
-            Route::post('images', 'SliderController@saveSliderImages')->name('admin.sliders.images.store');
-            Route::post('images/db', 'SliderController@saveSliderImagesDB')->name('admin.sliders.images.store.db');
 
-        });
-        ################################## end sliders    #######################################
 
     });
 //    'middleware' => 'guest:admin'

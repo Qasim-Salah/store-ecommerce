@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Dashboard;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class BrandRequest extends FormRequest
+class MainCategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,10 @@ class BrandRequest extends FormRequest
     public function rules()
     {
         return [
+            'photo' => 'nullable|mimes:jpg,jpeg,png,gif|max:20000',
             'name' => 'required',
-            'photo' => 'required_without:id|mimes:jpg,jpeg,png'
+//            'type' => 'required|in:1,2',
+            'slug' => 'required|unique:categories,slug,' . $this->id
         ];
     }
 
@@ -34,7 +36,7 @@ class BrandRequest extends FormRequest
 
         return [
             'required' => 'هذا الحقل مطلوب ',
-
+            'unique' => 'هذا القسم موجود'
         ];
     }
 }

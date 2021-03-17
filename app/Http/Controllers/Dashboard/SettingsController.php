@@ -3,21 +3,18 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ShippingsRequest;
+use App\Http\Dashboard\Requests\ShippingsRequest;
 use App\Models\Setting as SettingModel;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class SettingsController extends Controller
 {
-    public function editShippingMethods($type)
+    public function edit($type)
     {
-
         //free , inner , outer for shipping methods
 
         if ($type === 'free')
             $shippingMethod = SettingModel::where('key', 'free_shipping_label')->first();
-
 
         elseif ($type === 'inner')
             $shippingMethod = SettingModel::where('key', 'local_label')->first();
@@ -31,16 +28,14 @@ class SettingsController extends Controller
 
     }
 
-
-    public function updateShippingMethods(ShippingsRequest $request, $id)
+    public function update(ShippingsRequest $request, $id)
     {
-
         //validation
 
         //update db
 
         try {
-            $shipping_method = SettingModel::find($id);
+            $shipping_method = SettingModel::findorfail($id);
             DB::beginTransaction();
 
             $shipping_method->update(['plain_value' => $request->plain_value]);

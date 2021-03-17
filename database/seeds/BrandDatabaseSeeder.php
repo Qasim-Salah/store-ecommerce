@@ -1,9 +1,10 @@
 <?php
 
+use App\Models\Brand as BrandModel;
 use App\Models\Category as CategoryModel;
 use Illuminate\Database\Seeder;
 
-class CategoryDatabaseSeeder extends Seeder
+class BrandDatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +13,6 @@ class CategoryDatabaseSeeder extends Seeder
      */
     public function run()
     {
-        factory(CategoryModel::class, 20)->create();
+        factory(BrandModel::class, 20)->create();
     }
 }

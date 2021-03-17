@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Dashboard;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -25,10 +25,11 @@ class ProfileRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required|email|unique:admins,email,'.$this->id,
-            'password'  => 'nullable|confirmed|min:8'
+            'email' => 'required|email|unique:admins,email,' . $this->id,
+            'password' => 'nullable|confirmed|min:8'
         ];
     }
+
     public function messages()
     {
 

@@ -60,7 +60,8 @@ $('.dom-positioning').DataTable( {
 ************************************/
 
 $('.alt-pagination').DataTable( {
-    "pagingType": "full_numbers"
+    "pagingType": "full_numbers",
+    "paging": false
 } );
 
 /*************************************
@@ -88,7 +89,8 @@ $('.dynamic-height').DataTable( {
 ***************************************/
 
 $('.scroll-horizontal').DataTable( {
-    "scrollX": true
+    "scrollX": true,
+    "paging": false
 } );
 
 /**************************************************
@@ -97,7 +99,8 @@ $('.scroll-horizontal').DataTable( {
 
 $('.scroll-horizontal-vertical').DataTable( {
     "scrollY": 200,
-    "scrollX": true
+    "scrollX": true,
+    "paging": false
 } );
 
 /**********************************************
