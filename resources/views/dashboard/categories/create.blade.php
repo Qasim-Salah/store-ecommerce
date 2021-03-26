@@ -1,4 +1,9 @@
 @extends('layouts.admin')
+@section('title')
+
+    انشاء قسم
+@endsection
+
 @section('content')
 
     <div class="app-content content">
@@ -10,7 +15,7 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="">الرئيسية </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="{{route('admin.mainCategories')}}"> الاقسام
+                                <li class="breadcrumb-item"><a href="{{route('admin.Categories')}}"> الاقسام
                                         الرئيسية </a>
                                 </li>
                                 <li class="breadcrumb-item active"> أضافه قسم رئيسي
@@ -44,7 +49,7 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('admin.mainCategories.store')}}"
+                                              action="{{route('admin.Categories.store')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
@@ -96,7 +101,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="row hidden" id="cats_list" >
+                                                <div class="row hidden" id="cats_list">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> اختر القسم الرئيسي
@@ -178,7 +183,7 @@
                                                     <i class="ft-x"></i> تراجع
                                                 </button>
                                                 <button type="submit" class="btn btn-primary">
-                                                    <i class="la la-check-square-o"></i> تحديث
+                                                    <i class="la la-check-square-o"></i>حفظ
                                                 </button>
                                             </div>
                                         </form>
@@ -200,10 +205,10 @@
 
     <script>
         $('input:radio[name="type"]').change(
-            function(){
+            function () {
                 if (this.checked && this.value == '2') {  // 1 if main cat - 2 if sub cat
                     $('#cats_list').removeClass('hidden');
-                }else{
+                } else {
                     $('#cats_list').addClass('hidden');
                 }
             });

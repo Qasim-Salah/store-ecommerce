@@ -1,4 +1,8 @@
 @extends('layouts.admin')
+@section('title')
+
+    اضافة ماركة تجارية
+@endsection
 @section('content')
 
     <div class="app-content content">
@@ -10,9 +14,9 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="">الرئيسية </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="{{route('admin.brands')}}">  ألماركات التجارية </a>
+                                <li class="breadcrumb-item"><a href="{{route('admin.brands')}}"> ألماركات التجارية </a>
                                 </li>
-                                <li class="breadcrumb-item active">  أضافه ماركة تجارية
+                                <li class="breadcrumb-item active"> أضافه ماركة تجارية
                                 </li>
                             </ol>
                         </div>
@@ -61,7 +65,8 @@
 
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i> بيانات الماركة التجارية </h4>
+                                                <h4 class="form-section"><i class="ft-home"></i> بيانات الماركة التجارية
+                                                </h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -83,9 +88,9 @@
                                                                    name="is_active"
                                                                    id="switcheryColor4"
                                                                    class="switchery" data-color="success"
-                                                                   checked />
+                                                                   checked/>
                                                             <label for="switcheryColor4"
-                                                                   class="card-title ml-1">الحالة  </label>
+                                                                   class="card-title ml-1">الحالة </label>
 
                                                             @error("is_active")
                                                             <span class="text-danger">{{$message }}</span>
@@ -121,7 +126,7 @@
                                                     <i class="ft-x"></i> تراجع
                                                 </button>
                                                 <button type="submit" class="btn btn-primary">
-                                                    <i class="la la-check-square-o"></i> تحديث
+                                                    <i class="la la-check-square-o"></i>حفظ
                                                 </button>
                                             </div>
                                         </form>

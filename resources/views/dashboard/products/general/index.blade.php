@@ -1,5 +1,7 @@
-
 @extends('layouts.admin')
+@section('title')
+    المنتجات
+@endsection
 @section('content')
 
     <div class="app-content content">
@@ -48,9 +50,10 @@
                                             class="table display nowrap table-striped table-bordered scroll-horizontal">
                                             <thead class="">
                                             <tr>
-                                                <th>الاسم </th>
-                                                <th> الاسم بالرابط </th>
+                                                <th>الاسم</th>
+                                                <th> الاسم بالرابط</th>
                                                 <th>الحالة</th>
+                                                <th>الصورة</th>
                                                 <th>السعر</th>
                                                 <th>الإجراءات</th>
                                             </tr>
@@ -61,17 +64,16 @@
                                                 @foreach($products as $product)
                                                     <tr>
                                                         <td>{{$product -> name}}</td>
-                                                         <td>{{$product -> slug}}</td>
+                                                        <td>{{$product -> slug}}</td>
                                                         <td>{{$product -> getActive()}}</td>
+                                                        <td><img style="width: 150px; height: 100px;"
+                                                                 src="{{$product -> photo }}"></td>
                                                         <td>{{$product -> price}}</td>
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
                                                                 <a href="{{route('admin.products.price',$product -> id)}}"
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">السعر</a>
-
-                                                                <a href="{{route('admin.products.images',$product -> id)}}"
-                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">الصور</a>
 
                                                                 <a href="{{route('admin.products.stock',$product -> id)}}"
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">المستودع</a>
@@ -83,6 +85,7 @@
                                             </tbody>
                                         </table>
                                         <div class="justify-content-center d-flex">
+                                            {!! $products->appends(request()->input())->links() !!}
 
                                         </div>
                                     </div>
@@ -90,10 +93,9 @@
                             </div>
                         </div>
                     </div>
-                    {!! $products->appends(request()->input())->links() !!}
                 </section>
             </div>
         </div>
     </div>
 
-    @stop
+@stop

@@ -1,4 +1,7 @@
 @extends('layouts.admin')
+
+@section('title')
+    خصائص المنتج@endsection
 @section('content')
 
     <div class="app-content content">

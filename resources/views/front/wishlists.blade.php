@@ -1,5 +1,7 @@
-@extends('layouts.site')
-
+@extends('layouts.front')
+@section('title')
+    المفضلة
+@endsection
 @section('content')
 
     <nav data-depth="3" class="breadcrumb-bg">

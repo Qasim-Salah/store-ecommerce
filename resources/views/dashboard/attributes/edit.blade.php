@@ -1,5 +1,8 @@
-
 @extends('layouts.admin')
+@section('title')
+
+    تعديل خصائص المتج
+@endsection
 @section('content')
 
     <div class="app-content content">
@@ -11,7 +14,8 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="">الرئيسية </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="{{route('admin.attributes')}}"> الماركات التجارية </a>
+                                <li class="breadcrumb-item"><a href="{{route('admin.attributes')}}"> الماركات
+                                        التجارية </a>
                                 </li>
                                 <li class="breadcrumb-item active"> تعديل - {{$attribute -> name}}
                                 </li>
@@ -54,7 +58,7 @@
 
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i> بيانات   </h4>
+                                                <h4 class="form-section"><i class="ft-home"></i> بيانات </h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -97,4 +101,4 @@
         </div>
     </div>
 
-    @stop
+@stop

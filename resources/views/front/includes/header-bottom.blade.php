@@ -15,9 +15,11 @@
 
                                     @isset($categories)
                                         @foreach($categories as $category)
-                                            <li class="item  parent"><a href="{{route('category',$category -> slug )}}" title="Laptops &amp; Accessories"><i
-                                                        class="hasicon nov-icon"
-                                                        style="background:url('http://demo.bestprestashoptheme.com/savemart/themes/vinova_savemart/assets/img/modules/novverticalmenu/icon/laptop.png') no-repeat scroll center center;">
+                                            <li class="item  parent"><a href="{{route('category',$category -> slug )}}"
+                                                                        title="Laptops &amp; Accessories"><i
+                                                        class="hasicon nov-icon">
+                                                        <img style="width: 35px; height: 35px;"
+                                                             src="{{$category -> photo }}">
 
                                                     </i>{{$category -> name}}</a>
 
@@ -30,6 +32,8 @@
                                                             @foreach($category -> childrens as $childern)
                                                                 <li class="item ">
                                                                 <li class="item  parent">
+                                                                    <img style="width: 35px; height: 35px;"
+                                                                         src="{{$childern -> photo }}">
                                                                     <a href="{{route('category',$childern -> slug )}}"
                                                                        title="Laptop Thinkpad">{{$childern -> name}}</a>
                                                                     @isset($childern -> childrens )
@@ -37,6 +41,9 @@
                                                                         <div class="dropdown-menu">
                                                                             <ul>
                                                                                 @foreach($childern -> childrens  as $_childern)
+                                                                                    <img
+                                                                                        style="width: 35px; height: 35px;"
+                                                                                        src="{{$childern -> photo }}">
                                                                                     <li class="item ">
                                                                                         <a href="{{route('category',$_childern -> slug )}}"
                                                                                            title="Aliquam lobortis">

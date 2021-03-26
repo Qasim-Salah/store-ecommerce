@@ -24,8 +24,17 @@ class VerificationRequest extends FormRequest
     public function rules()
     {
         return [
-             'code' => 'required',
+            'code' => 'required',
         ];
     }
+
+    public function messages()
+    {
+
+        return [
+            'required' => 'هذا الحقل مطلوب ',
+        ];
+    }
+
 
 }

@@ -1,5 +1,7 @@
-@extends('layouts.site')
-
+@extends('layouts.front')
+@section('title')
+    المفضلة
+@endsection
 @section('content')
 
     <div id="wrapper-site">
@@ -244,7 +246,8 @@
                                     <ul class="nav nav-tabs">
 
                                         <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" aria-expanded="true" href="#product-details">Product
+                                            <a class="nav-link active" data-toggle="tab" aria-expanded="true"
+                                               href="#product-details">Product
                                                 Detail</a>
                                         </li>
                                         <li class="nav-item">
@@ -397,11 +400,11 @@
                                             </div>
                                         </div>
 
-                                     </div>
+                                    </div>
                                 </div>
                                 <div class="col-lg-3 col-md-5">
 
-                                     <div class="nov-html col-xl-12 col-lg-12 col-md-12 policy-product no-padding">
+                                    <div class="nov-html col-xl-12 col-lg-12 col-md-12 policy-product no-padding">
                                         <div class="block">
                                             <div class="block_content">
                                                 <div class="policy-row d-flex">
@@ -445,76 +448,80 @@
                                 </h3>
                                 @if( isset($related_products) && count($related_products) > 0 )
                                     @foreach($related_products as $_product)
-                                <div class="products product_list grid owl-carousel owl-theme" data-autoplay="true"
-                                     data-autoplaytimeout="6000" data-loop="true" data-items="5" data-margin="0"
-                                     data-nav="true" data-dots="false" data-items_mobile="2">
+                                        <div class="products product_list grid owl-carousel owl-theme"
+                                             data-autoplay="true"
+                                             data-autoplaytimeout="6000" data-loop="true" data-items="5" data-margin="0"
+                                             data-nav="true" data-dots="false" data-items_mobile="2">
 
-                                    <div class="item  text-center">
-                                        <div class="product-miniature js-product-miniature item-two first_item"
-                                             data-id-product="{{$_product -> id }}" data-id-product-attribute="60" itemscope=""
-                                             itemtype="http://schema.org/Product">
-                                            <div class="product-cat-content">
-                                                <div class="category-title">
-                                                <div class="product-title" itemprop="name"><a
-                                                        href="{{route('product.details',$_product -> slug)}}">{{$_product -> name}}</a></div>
+                                            <div class="item  text-center">
+                                                <div class="product-miniature js-product-miniature item-two first_item"
+                                                     data-id-product="{{$_product -> id }}"
+                                                     data-id-product-attribute="60" itemscope=""
+                                                     itemtype="http://schema.org/Product">
+                                                    <div class="product-cat-content">
+                                                        <div class="category-title">
+                                                            <div class="product-title" itemprop="name"><a
+                                                                    href="{{route('product.details',$_product -> slug)}}">{{$_product -> name}}</a>
+                                                            </div>
 
-                                            </div>
-                                            <div class="thumbnail-container">
+                                                        </div>
+                                                        <div class="thumbnail-container">
 
-                                                <a href="{{route('product.details',$_product -> slug)}}"
-                                                   class="thumbnail product-thumbnail two-image">
-                                                    <img class="img-fluid image-cover"
-                                                         src="{{$_product -> images[0] -> photo ?? ''}}"
-                                                         alt=""
-                                                         data-full-size-image-url="{{$product -> images[0] -> photo ?? ''}}"
-                                                         width="600" height="600">
-                                                    <img class="img-fluid image-secondary"
-                                                         src="{{$_product -> images[0] -> photo ?? ''}}"
-                                                         alt=""
-                                                         data-full-size-image-url="{{$_product -> images[0] -> photo ?? ''}}"
-                                                         width="600" height="600">
-                                                </a>
+                                                            <a href="{{route('product.details',$_product -> slug)}}"
+                                                               class="thumbnail product-thumbnail two-image">
+                                                                <img class="img-fluid image-cover"
+                                                                     src="{{$_product -> images[0] -> photo ?? ''}}"
+                                                                     alt=""
+                                                                     data-full-size-image-url="{{$product -> images[0] -> photo ?? ''}}"
+                                                                     width="600" height="600">
+                                                                <img class="img-fluid image-secondary"
+                                                                     src="{{$_product -> images[0] -> photo ?? ''}}"
+                                                                     alt=""
+                                                                     data-full-size-image-url="{{$_product -> images[0] -> photo ?? ''}}"
+                                                                     width="600" height="600">
+                                                            </a>
 
-                                            </div>
-                                            <div class="product-description">
-                                                <div class="product-groups">
-                                                    <div class="product-group-price">
-                                                        <div class="product-price-and-shipping">
+                                                        </div>
+                                                        <div class="product-description">
+                                                            <div class="product-groups">
+                                                                <div class="product-group-price">
+                                                                    <div class="product-price-and-shipping">
                                                              <span itemprop="price"
                                                                    class="price">{{$_product -> special_price ?? $_product -> price }}</span>
-                                                            @if($_product -> special_price)
-                                                                <span
-                                                                    class="regular-price">{{$_product -> price}}</span>
-                                                            @endif
+                                                                        @if($_product -> special_price)
+                                                                            <span
+                                                                                class="regular-price">{{$_product -> price}}</span>
+                                                                        @endif
 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-comments">
+                                                                    <div class="star_content">
+                                                                        <div class="star"></div>
+                                                                        <div class="star"></div>
+                                                                        <div class="star"></div>
+                                                                        <div class="star"></div>
+                                                                        <div class="star"></div>
+                                                                    </div>
+                                                                    <span>0 review</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-buttons d-flex justify-content-start"
+                                                                 itemprop="offers" itemscope=""
+                                                                 itemtype="http://schema.org/Offer">
+
+                                                                <a class="addToWishlist  wishlistProd_22" href="#"
+                                                                   data-product-id="{{$_product -> id}}"
+                                                                >
+                                                                    <a href="#" class="quick-view hidden-sm-down"
+                                                                       data-product-id="{{$_product -> id}}">
+                                                                        <i class="fa fa-search"></i><span> Quick view</span>
+                                                                    </a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="product-comments">
-                                                        <div class="star_content">
-                                                            <div class="star"></div>
-                                                            <div class="star"></div>
-                                                            <div class="star"></div>
-                                                            <div class="star"></div>
-                                                            <div class="star"></div>
-                                                        </div>
-                                                        <span>0 review</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-buttons d-flex justify-content-start"
-                                                     itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-
-                                                    <a class="addToWishlist  wishlistProd_22" href="#"
-                                                       data-product-id="{{$_product -> id}}"
-                                                    >
-                                                        <a href="#" class="quick-view hidden-sm-down"
-                                                           data-product-id="{{$_product -> id}}">
-                                                            <i class="fa fa-search"></i><span> Quick view</span>
-                                                        </a>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
                                     @endforeach
                                 @endif
                             </section>

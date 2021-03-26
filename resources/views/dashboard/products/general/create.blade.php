@@ -1,4 +1,8 @@
 @extends('layouts.admin')
+@section('title')
+
+    اضافة منتج
+@endsection
 @section('content')
 
     <div class="app-content content">
@@ -48,16 +52,26 @@
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
-
+                                            <div class="form-group">
+                                                <label> صوره النتج </label>
+                                                <label id="projectinput7" class="file center-block">
+                                                    <input type="file" id="file" name="photo">
+                                                    <span class="file-custom"></span>
+                                                </label>
+                                                @error('photo')
+                                                <span class="text-danger">{{$message}}</span>
+                                                @enderror
+                                            </div>
 
 
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i> البيانات الاساسية للمنتج   </h4>
+                                                <h4 class="form-section"><i class="ft-home"></i> البيانات الاساسية
+                                                    للمنتج </h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> اسم  المنتج
+                                                            <label for="projectinput1"> اسم المنتج
                                                             </label>
                                                             <input type="text" id="name"
                                                                    class="form-control"
@@ -91,9 +105,9 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> وصف المنتج
                                                             </label>
-                                                            <textarea  name="description" id="description"
-                                                                   class="form-control"
-                                                                   placeholder="  "
+                                                            <textarea name="description" id="description"
+                                                                      class="form-control"
+                                                                      placeholder="  "
                                                             >{{old('description')}}</textarea>
 
                                                             @error("description")
@@ -106,9 +120,9 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> الوصف المختصر
                                                             </label>
-                                                            <textarea  name="short_description" id="short-description"
-                                                                       class="form-control"
-                                                                       placeholder=""
+                                                            <textarea name="short_description" id="short-description"
+                                                                      class="form-control"
+                                                                      placeholder=""
                                                             >{{old('short_description')}}</textarea>
 
                                                             @error("short_description")
@@ -120,12 +134,13 @@
                                                 </div>
 
 
-                                                <div class="row" >
+                                                <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> اختر القسم
                                                             </label>
-                                                            <select name="categories[]" class="select2 form-control" multiple>
+                                                            <select name="categories[]" class="select2 form-control"
+                                                                    multiple>
                                                                 <optgroup label="من فضلك أختر القسم ">
                                                                     @if($categories && $categories -> count() > 0)
                                                                         @foreach($categories as $category)
@@ -208,7 +223,7 @@
                                                     <i class="ft-x"></i> تراجع
                                                 </button>
                                                 <button type="submit" class="btn btn-primary">
-                                                    <i class="la la-check-square-o"></i> تحديث
+                                                    <i class="la la-check-square-o"></i> حفظ
                                                 </button>
                                             </div>
                                         </form>
@@ -230,13 +245,13 @@
 
     <script>
         $('input:radio[name="type"]').change(
-            function(){
+            function () {
                 if (this.checked && this.value == '2') {  // 1 if main cat - 2 if sub cat
                     $('#cats_list').removeClass('hidden');
 
-                }else{
+                } else {
                     $('#cats_list').addClass('hidden');
                 }
             });
     </script>
-    @stop
+@stop

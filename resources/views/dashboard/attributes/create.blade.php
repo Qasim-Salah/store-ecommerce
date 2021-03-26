@@ -1,5 +1,8 @@
-
 @extends('layouts.admin')
+@section('title')
+
+    اضافة خصائص المنتج
+@endsection
 @section('content')
 
     <div class="app-content content">
@@ -11,9 +14,9 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="">الرئيسية </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="{{route('admin.attributes')}}"> خصائص المنتج  </a>
+                                <li class="breadcrumb-item"><a href="{{route('admin.attributes')}}"> خصائص المنتج </a>
                                 </li>
-                                <li class="breadcrumb-item active">  أضافه ماركة تجارية
+                                <li class="breadcrumb-item active"> أضافه ماركة تجارية
                                 </li>
                             </ol>
                         </div>
@@ -57,7 +60,7 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> الاسم
-                                                                 </label>
+                                                            </label>
                                                             <input type="text" id="name"
                                                                    class="form-control"
                                                                    placeholder="  "
@@ -68,7 +71,6 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-
 
 
                                                 </div>
@@ -98,4 +100,4 @@
         </div>
     </div>
 
-    @stop
+@stop

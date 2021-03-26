@@ -1,4 +1,9 @@
 @extends('layouts.admin')
+
+@section('title')
+
+    تعديل الماركة التجارية
+@endsection
 @section('content')
 
     <div class="app-content content">
@@ -66,7 +71,8 @@
                                                 @enderror
                                             </div>
                                             <div class="form-body">
-                                                <h4 class="form-section"><i class="ft-home"></i> بيانات الماركة التجارية </h4>
+                                                <h4 class="form-section"><i class="ft-home"></i> بيانات الماركة التجارية
+                                                </h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -88,9 +94,9 @@
                                                                    name="is_active"
                                                                    id="switcheryColor4"
                                                                    class="switchery" data-color="success"
-                                                                   @if($brand -> is_active == 1)checked @endif />
+                                                                   @if($brand -> is_active == \App\Http\Enumerations\BrandsType::ActiveBrand)checked @endif />
                                                             <label for="switcheryColor4"
-                                                                   class="card-title ml-1">الحالة  </label>
+                                                                   class="card-title ml-1">الحالة </label>
                                                             @error("is_active")
                                                             <span class="text-danger">{{$message }}</span>
                                                             @enderror

@@ -1,4 +1,4 @@
-@extends('layouts.site')
+@extends('layouts.front')
 
 @section('content')
     <nav data-depth="1" class="breadcrumb-bg">

@@ -1,5 +1,8 @@
-@extends('layouts.site')
+@extends('layouts.front')
 
+@section('title')
+    السوق
+@endsection
 @section('slider')
     <div id="displayTop" class="displaytopthree">
         <div class="container">
@@ -26,36 +29,29 @@
                                                 <div class="dot"></div>
                                             @endforeach
                                         @endisset
-
-
                                     </div>
                                 </div>
                             </div>
                             <div class="nivoSlider">
-
                                 @isset($sliders)
                                     @foreach($sliders as $slider)
                                         <a href="#">
-                                            <img src="{{$slider -> photo }}"
+                                            <img
+                                                src="{{$slider -> photo }}"
                                                  alt="" title="#htmlcaption_42">
                                         </a>
                                     @endforeach
                                 @endisset
-
-
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    @stop
+@stop
 @section('content')
-
     <div id="main">
-
         <section id="content" class="page-home pagehome-three">
             <div class="container">
                 <div class="row">
@@ -68,8 +64,6 @@
                                             <a href="#"> <img class="img-fluid"
                                                               src="assets/images/1.jpg"
                                                               alt="banner3-1" title="banner3-1"></a>
-
-
                                         </div>
                                     </div>
                                 </div>
@@ -81,8 +75,6 @@
                                             <a href="#"> <img class="img-fluid"
                                                               src="assets/images/2.jpg"
                                                               alt="banner3-1" title="banner3-1"></a>
-
-
                                         </div>
                                     </div>
                                 </div>
@@ -94,8 +86,6 @@
                                             <a href="#"> <img class="img-fluid"
                                                               src="assets/images/3.jpg"
                                                               alt="banner3-1" title="banner3-1"></a>
-
-
                                         </div>
                                     </div>
                                 </div>
@@ -104,7 +94,8 @@
                     </div>
                     <div class="nov-row  col-lg-12 col-xs-12">
                         <div class="nov-row-wrap row">
-                            <div class="nov-productlist nov-countdown-productlist col-xl-4 col-lg-4 col-md-4  col-xs-12 col-md-12">
+                            <div
+                                class="nov-productlist nov-countdown-productlist col-xl-4 col-lg-4 col-md-4  col-xs-12 col-md-12">
                                 <div class="block block-product clearfix">
                                     <h2 class="title_block">
                                         FLASH DEALS --
@@ -134,10 +125,7 @@
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/80-large_default/nam-volutpat-justo-a-vehicula.jpg"
                                                                  width="600" height="600">
                                                         </a>
-
-
                                                         <div class="product-flags discount">Sale</div>
-
 
                                                     </div>
                                                     <div class="product-description">
@@ -146,7 +134,6 @@
                                                             <div class="product-title" itemprop="name"><a
                                                                     href="home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-size-s/11-color-black">Nam
                                                                     volutpat justo a vehicula</a></div>
-
                                                             <div class="product-comments">
                                                                 <div class="star_content">
                                                                     <div class="star"></div>
@@ -164,29 +151,20 @@
                                                                     Harry Makle
                                                                 </a>
                                                             </p>
-
                                                             <div class="product-group-price">
-
                                                                 <div class="product-price-and-shipping">
-
-
                                                                             <span itemprop="price"
                                                                                   class="price">£7.56</span>
-
-
                                                                     <span class="regular-price">£10.80</span>
-
-
                                                                 </div>
-
                                                             </div>
                                                         </div>
-
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -284,8 +262,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -383,8 +362,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -482,8 +462,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -516,7 +497,8 @@
                                 </div>
                             </div>
 
-                            <div class="nov-productlist  productlist-rows     col-xl-8 col-lg-8 col-md-8 col-xs-12 col-md-12">
+                            <div
+                                class="nov-productlist  productlist-rows     col-xl-8 col-lg-8 col-md-8 col-xs-12 col-md-12">
                                 <div class="block block-product clearfix">
                                     <h2 class="title_block">
                                         NEW ARRIVALS
@@ -528,9 +510,10 @@
                                              data-margin="30" data-dots="false" data-nav="true" data-items="2"
                                              data-items_large="2" data-items_tablet="3" data-items_mobile="1">
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
-                                                     data-id-product="1" data-id-product-attribute="40"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
+                                                    data-id-product="1" data-id-product-attribute="40"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -581,7 +564,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£24.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£24.00</span>
 
 
                                                                     </div>
@@ -591,8 +575,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -616,9 +601,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
-                                                     data-id-product="2" data-id-product-attribute="60"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
+                                                    data-id-product="2" data-id-product-attribute="60"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -669,7 +655,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£36.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£36.00</span>
 
 
                                                                     </div>
@@ -679,8 +666,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -704,9 +692,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
-                                                     data-id-product="3" data-id-product-attribute="95"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
+                                                    data-id-product="3" data-id-product-attribute="95"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -757,7 +746,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£30.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£30.00</span>
 
 
                                                                     </div>
@@ -767,8 +757,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -794,9 +785,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
-                                                     data-id-product="4" data-id-product-attribute="112"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
+                                                    data-id-product="4" data-id-product-attribute="112"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -847,7 +839,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -857,8 +850,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -882,9 +876,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
-                                                     data-id-product="5" data-id-product-attribute="134"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
+                                                    data-id-product="5" data-id-product-attribute="134"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -935,7 +930,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£34.80</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£34.80</span>
 
 
                                                                     </div>
@@ -945,8 +941,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -970,9 +967,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
-                                                     data-id-product="6" data-id-product-attribute="0"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
+                                                    data-id-product="6" data-id-product-attribute="0"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -1023,7 +1021,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£14.28</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£14.28</span>
 
 
                                                                     </div>
@@ -1033,8 +1032,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -1060,9 +1060,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
-                                                     data-id-product="7" data-id-product-attribute="155"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
+                                                    data-id-product="7" data-id-product-attribute="155"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -1113,7 +1114,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£14.28</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£14.28</span>
 
 
                                                                     </div>
@@ -1123,8 +1125,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -1148,9 +1151,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
-                                                     data-id-product="8" data-id-product-attribute="172"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
+                                                    data-id-product="8" data-id-product-attribute="172"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -1201,7 +1205,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -1211,8 +1216,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -1236,9 +1242,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
-                                                     data-id-product="9" data-id-product-attribute="179"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
+                                                    data-id-product="9" data-id-product-attribute="179"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -1289,7 +1296,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£24.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£24.00</span>
 
 
                                                                     </div>
@@ -1299,8 +1307,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -1326,9 +1335,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
-                                                     data-id-product="10" data-id-product-attribute="192"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
+                                                    data-id-product="10" data-id-product-attribute="192"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -1379,7 +1389,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£36.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£36.00</span>
 
 
                                                                     </div>
@@ -1389,8 +1400,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -1414,9 +1426,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
-                                                     data-id-product="12" data-id-product-attribute="232"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
+                                                    data-id-product="12" data-id-product-attribute="232"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -1467,7 +1480,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£7.56</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£7.56</span>
 
 
                                                                         <span class="regular-price">£10.80</span>
@@ -1480,8 +1494,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -1505,9 +1520,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
-                                                     data-id-product="13" data-id-product-attribute="254"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
+                                                    data-id-product="13" data-id-product-attribute="254"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -1558,7 +1574,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£12.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£12.00</span>
 
 
                                                                     </div>
@@ -1568,8 +1585,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -1595,9 +1613,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
-                                                     data-id-product="14" data-id-product-attribute="270"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
+                                                    data-id-product="14" data-id-product-attribute="270"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -1648,7 +1667,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -1658,8 +1678,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -1683,9 +1704,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
-                                                     data-id-product="15" data-id-product-attribute="303"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
+                                                    data-id-product="15" data-id-product-attribute="303"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -1736,7 +1758,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£37.80</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£37.80</span>
 
 
                                                                         <span class="regular-price">£42.00</span>
@@ -1749,8 +1772,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -1774,9 +1798,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
-                                                     data-id-product="16" data-id-product-attribute="323"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
+                                                    data-id-product="16" data-id-product-attribute="323"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -1827,7 +1852,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£21.60</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£21.60</span>
 
 
                                                                         <span class="regular-price">£24.00</span>
@@ -1840,8 +1866,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -1867,9 +1894,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
-                                                     data-id-product="17" data-id-product-attribute="328"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item"
+                                                    data-id-product="17" data-id-product-attribute="328"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -1920,7 +1948,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£12.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£12.00</span>
 
 
                                                                     </div>
@@ -1930,8 +1959,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -1955,9 +1985,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
-                                                     data-id-product="18" data-id-product-attribute="363"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row"
+                                                    data-id-product="18" data-id-product-attribute="363"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -2008,7 +2039,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -2018,8 +2050,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -2043,9 +2076,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
-                                                     data-id-product="19" data-id-product-attribute="383"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item"
+                                                    data-id-product="19" data-id-product-attribute="383"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w40 pl-0">
                                                         <div class="thumbnail-container">
 
@@ -2096,7 +2130,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£12.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£12.00</span>
 
 
                                                                     </div>
@@ -2106,8 +2141,9 @@
                                                             <div class="product-buttons d-flex justify-content-center"
                                                                  itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                      method="post" class="formAddToCart">
+                                                                <form
+                                                                    action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                    method="post" class="formAddToCart">
                                                                     <input type="hidden" name="token"
                                                                            value="28add935523ef131c8432825597b9928">
                                                                     <input type="hidden" name="id_product"
@@ -2166,7 +2202,8 @@
                     </div>
                     <div class="nov-row  col-lg-12 col-xs-12">
                         <div class="nov-row-wrap row">
-                            <div class="nov-productlist   productlist-slider      col-xl-9 col-lg-9 col-md-9 col-xs-12 col-md-12 col-lg-12">
+                            <div
+                                class="nov-productlist   productlist-slider      col-xl-9 col-lg-9 col-md-9 col-xs-12 col-md-12 col-lg-12">
                                 <div class="block block-product clearfix">
                                     <h2 class="title_block">
                                         TRENDING NOW
@@ -2246,8 +2283,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -2336,8 +2374,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -2430,8 +2469,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -2522,8 +2562,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -2616,8 +2657,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -2708,8 +2750,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -2802,8 +2845,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -2894,8 +2938,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -2988,8 +3033,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -3080,8 +3126,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -3180,8 +3227,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -3272,8 +3320,9 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/en/cart"
-                                                                  method="post" class="formAddToCart">
+                                                            <form
+                                                                action="http://demo.bestprestashoptheme.com/savemart/en/cart"
+                                                                method="post" class="formAddToCart">
                                                                 <input type="hidden" name="token"
                                                                        value="28add935523ef131c8432825597b9928">
                                                                 <input type="hidden" name="id_product"
@@ -3302,7 +3351,8 @@
                                 </div>
                             </div>
 
-                            <div class="nov-productlist     productlist-liststyle-2  col-xl-3 col-lg-3 col-md-3 col-xs-12 col-md-12 col-lg-12">
+                            <div
+                                class="nov-productlist     productlist-liststyle-2  col-xl-3 col-lg-3 col-md-3 col-xs-12 col-md-12 col-lg-12">
                                 <div class="block block-product clearfix">
                                     <h2 class="title_block">
                                         BEST SELLERS
@@ -3314,9 +3364,10 @@
                                              data-margin="0" data-dots="false" data-nav="true" data-items="1"
                                              data-items_large="3" data-items_tablet="2" data-items_mobile="1">
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
-                                                     data-id-product="1" data-id-product-attribute="40"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
+                                                    data-id-product="1" data-id-product-attribute="40"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -3367,7 +3418,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£24.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£24.00</span>
 
 
                                                                     </div>
@@ -3377,9 +3429,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="2" data-id-product-attribute="60"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="2" data-id-product-attribute="60"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -3430,7 +3483,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£36.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£36.00</span>
 
 
                                                                     </div>
@@ -3440,9 +3494,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="3" data-id-product-attribute="95"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="3" data-id-product-attribute="95"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -3493,7 +3548,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£30.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£30.00</span>
 
 
                                                                     </div>
@@ -3503,9 +3559,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="4" data-id-product-attribute="112"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="4" data-id-product-attribute="112"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -3556,7 +3613,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -3566,9 +3624,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="5" data-id-product-attribute="134"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="5" data-id-product-attribute="134"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -3619,7 +3678,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£34.80</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£34.80</span>
 
 
                                                                     </div>
@@ -3629,9 +3689,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
-                                                     data-id-product="6" data-id-product-attribute="0"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
+                                                    data-id-product="6" data-id-product-attribute="0"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -3682,7 +3743,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£14.28</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£14.28</span>
 
 
                                                                     </div>
@@ -3694,9 +3756,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
-                                                     data-id-product="7" data-id-product-attribute="155"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
+                                                    data-id-product="7" data-id-product-attribute="155"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -3747,7 +3810,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£14.28</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£14.28</span>
 
 
                                                                     </div>
@@ -3757,9 +3821,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="8" data-id-product-attribute="172"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="8" data-id-product-attribute="172"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -3810,7 +3875,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -3820,9 +3886,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="9" data-id-product-attribute="179"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="9" data-id-product-attribute="179"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -3873,7 +3940,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£24.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£24.00</span>
 
 
                                                                     </div>
@@ -3883,9 +3951,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="10" data-id-product-attribute="192"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="10" data-id-product-attribute="192"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -3936,7 +4005,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£36.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£36.00</span>
 
 
                                                                     </div>
@@ -3946,9 +4016,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="12" data-id-product-attribute="232"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="12" data-id-product-attribute="232"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -3999,7 +4070,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£7.56</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£7.56</span>
 
 
                                                                         <span class="regular-price">£10.80</span>
@@ -4012,9 +4084,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
-                                                     data-id-product="13" data-id-product-attribute="254"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
+                                                    data-id-product="13" data-id-product-attribute="254"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4065,7 +4138,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£12.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£12.00</span>
 
 
                                                                     </div>
@@ -4077,9 +4151,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
-                                                     data-id-product="14" data-id-product-attribute="270"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
+                                                    data-id-product="14" data-id-product-attribute="270"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4130,7 +4205,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -4140,9 +4216,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="15" data-id-product-attribute="303"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="15" data-id-product-attribute="303"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4193,7 +4270,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£37.80</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£37.80</span>
 
 
                                                                         <span class="regular-price">£42.00</span>
@@ -4206,9 +4284,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="16" data-id-product-attribute="323"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="16" data-id-product-attribute="323"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4259,7 +4338,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£21.60</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£21.60</span>
 
 
                                                                         <span class="regular-price">£24.00</span>
@@ -4272,9 +4352,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="17" data-id-product-attribute="328"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="17" data-id-product-attribute="328"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4325,7 +4406,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£12.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£12.00</span>
 
 
                                                                     </div>
@@ -4335,9 +4417,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="18" data-id-product-attribute="363"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="18" data-id-product-attribute="363"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4393,7 +4476,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -4403,9 +4487,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
-                                                     data-id-product="19" data-id-product-attribute="383"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
+                                                    data-id-product="19" data-id-product-attribute="383"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4456,7 +4541,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£12.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£12.00</span>
 
 
                                                                     </div>
@@ -4468,9 +4554,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
-                                                     data-id-product="21" data-id-product-attribute="391"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
+                                                    data-id-product="21" data-id-product-attribute="391"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4521,7 +4608,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£16.20</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£16.20</span>
 
 
                                                                         <span class="regular-price">£18.00</span>
@@ -4534,9 +4622,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="22" data-id-product-attribute="408"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="22" data-id-product-attribute="408"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4587,7 +4676,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£24.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£24.00</span>
 
 
                                                                     </div>
@@ -4597,9 +4687,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="23" data-id-product-attribute="443"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="23" data-id-product-attribute="443"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4650,7 +4741,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£14.40</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£14.40</span>
 
 
                                                                         <span class="regular-price">£18.00</span>
@@ -4663,9 +4755,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="24" data-id-product-attribute="0"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="24" data-id-product-attribute="0"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4716,7 +4809,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£9.60</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£9.60</span>
 
 
                                                                         <span class="regular-price">£12.00</span>
@@ -4729,9 +4823,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
-                                                     data-id-product="26" data-id-product-attribute="0"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
+                                                    data-id-product="26" data-id-product-attribute="0"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w37 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4775,7 +4870,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£36.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£36.00</span>
 
 
                                                                     </div>
@@ -4839,7 +4935,8 @@
                     </div>
                     <div class="nov-row  col-lg-12 col-xs-12">
                         <div class="nov-row-wrap row">
-                            <div class="nov-productlist   productlist-liststyle    col-xl-4 col-lg-4 col-md-4 col-xs-12 col-md-12">
+                            <div
+                                class="nov-productlist   productlist-liststyle    col-xl-4 col-lg-4 col-md-4 col-xs-12 col-md-12">
                                 <div class="block block-product clearfix">
                                     <h2 class="title_block">
                                         SMARTPHONE
@@ -4851,9 +4948,10 @@
                                              data-margin="0" data-dots="false" data-nav="true" data-items="1"
                                              data-items_large="1" data-items_tablet="2" data-items_mobile="1">
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
-                                                     data-id-product="1" data-id-product-attribute="40"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
+                                                    data-id-product="1" data-id-product-attribute="40"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4904,7 +5002,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£24.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£24.00</span>
 
 
                                                                     </div>
@@ -4914,9 +5013,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="2" data-id-product-attribute="60"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="2" data-id-product-attribute="60"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -4967,7 +5067,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£36.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£36.00</span>
 
 
                                                                     </div>
@@ -4977,9 +5078,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
-                                                     data-id-product="3" data-id-product-attribute="95"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
+                                                    data-id-product="3" data-id-product-attribute="95"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5030,7 +5132,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£30.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£30.00</span>
 
 
                                                                     </div>
@@ -5042,9 +5145,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
-                                                     data-id-product="4" data-id-product-attribute="112"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
+                                                    data-id-product="4" data-id-product-attribute="112"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5095,7 +5199,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -5105,9 +5210,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="5" data-id-product-attribute="134"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="5" data-id-product-attribute="134"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5158,7 +5264,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£34.80</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£34.80</span>
 
 
                                                                     </div>
@@ -5168,9 +5275,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
-                                                     data-id-product="6" data-id-product-attribute="0"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
+                                                    data-id-product="6" data-id-product-attribute="0"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5221,7 +5329,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£14.28</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£14.28</span>
 
 
                                                                     </div>
@@ -5237,7 +5346,8 @@
                                 </div>
                             </div>
 
-                            <div class="nov-productlist   productlist-liststyle    col-xl-4 col-lg-4 col-md-4 col-xs-12 col-md-12">
+                            <div
+                                class="nov-productlist   productlist-liststyle    col-xl-4 col-lg-4 col-md-4 col-xs-12 col-md-12">
                                 <div class="block block-product clearfix">
                                     <h2 class="title_block">
                                         GAMING GEAR
@@ -5249,9 +5359,10 @@
                                              data-margin="0" data-dots="false" data-nav="true" data-items="1"
                                              data-items_large="1" data-items_tablet="2" data-items_mobile="1">
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
-                                                     data-id-product="1" data-id-product-attribute="40"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
+                                                    data-id-product="1" data-id-product-attribute="40"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5302,7 +5413,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£24.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£24.00</span>
 
 
                                                                     </div>
@@ -5312,9 +5424,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="2" data-id-product-attribute="60"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="2" data-id-product-attribute="60"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5365,7 +5478,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£36.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£36.00</span>
 
 
                                                                     </div>
@@ -5375,9 +5489,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
-                                                     data-id-product="3" data-id-product-attribute="95"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
+                                                    data-id-product="3" data-id-product-attribute="95"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5428,7 +5543,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£30.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£30.00</span>
 
 
                                                                     </div>
@@ -5440,9 +5556,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
-                                                     data-id-product="4" data-id-product-attribute="112"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
+                                                    data-id-product="4" data-id-product-attribute="112"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5493,7 +5610,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -5503,9 +5621,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="6" data-id-product-attribute="0"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="6" data-id-product-attribute="0"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5556,7 +5675,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£14.28</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£14.28</span>
 
 
                                                                     </div>
@@ -5566,9 +5686,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
-                                                     data-id-product="7" data-id-product-attribute="155"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
+                                                    data-id-product="7" data-id-product-attribute="155"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5619,7 +5740,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£14.28</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£14.28</span>
 
 
                                                                     </div>
@@ -5635,7 +5757,8 @@
                                 </div>
                             </div>
 
-                            <div class="nov-productlist   productlist-liststyle    col-xl-4 col-lg-4 col-md-4 col-xs-12 col-md-12">
+                            <div
+                                class="nov-productlist   productlist-liststyle    col-xl-4 col-lg-4 col-md-4 col-xs-12 col-md-12">
                                 <div class="block block-product clearfix">
                                     <h2 class="title_block">
                                         AUDIO
@@ -5647,9 +5770,10 @@
                                              data-margin="0" data-dots="false" data-nav="true" data-items="1"
                                              data-items_large="1" data-items_tablet="2" data-items_mobile="1">
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
-                                                     data-id-product="2" data-id-product-attribute="60"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
+                                                    data-id-product="2" data-id-product-attribute="60"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5700,7 +5824,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£36.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£36.00</span>
 
 
                                                                     </div>
@@ -5710,9 +5835,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="7" data-id-product-attribute="155"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="7" data-id-product-attribute="155"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5763,7 +5889,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£14.28</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£14.28</span>
 
 
                                                                     </div>
@@ -5773,9 +5900,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
-                                                     data-id-product="8" data-id-product-attribute="172"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
+                                                    data-id-product="8" data-id-product-attribute="172"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5826,7 +5954,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -5838,9 +5967,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
-                                                     data-id-product="10" data-id-product-attribute="192"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
+                                                    data-id-product="10" data-id-product-attribute="192"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5891,7 +6021,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£36.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£36.00</span>
 
 
                                                                     </div>
@@ -5901,9 +6032,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="12" data-id-product-attribute="232"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="12" data-id-product-attribute="232"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -5954,7 +6086,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£7.56</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£7.56</span>
 
 
                                                                         <span class="regular-price">£10.80</span>
@@ -5967,9 +6100,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
-                                                     data-id-product="13" data-id-product-attribute="254"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
+                                                    data-id-product="13" data-id-product-attribute="254"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -6020,7 +6154,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£12.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£12.00</span>
 
 
                                                                     </div>
@@ -6032,9 +6167,10 @@
                                                 </div>
                                             </div>
                                             <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
-                                                     data-id-product="14" data-id-product-attribute="270"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item"
+                                                    data-id-product="14" data-id-product-attribute="270"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -6085,7 +6221,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£18.00</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£18.00</span>
 
 
                                                                     </div>
@@ -6095,9 +6232,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
-                                                     data-id-product="15" data-id-product-attribute="303"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature "
+                                                    data-id-product="15" data-id-product-attribute="303"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -6148,7 +6286,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£37.80</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£37.80</span>
 
 
                                                                         <span class="regular-price">£42.00</span>
@@ -6161,9 +6300,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
-                                                     data-id-product="16" data-id-product-attribute="323"
-                                                     itemscope="" itemtype="http://schema.org/Product">
+                                                <div
+                                                    class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item"
+                                                    data-id-product="16" data-id-product-attribute="323"
+                                                    itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="col-12 col-w27 no-padding">
                                                         <div class="thumbnail-container">
 
@@ -6214,7 +6354,8 @@
                                                                     <div class="product-price-and-shipping">
 
 
-                                                                        <span itemprop="price" class="price">£21.60</span>
+                                                                        <span itemprop="price"
+                                                                              class="price">£21.60</span>
 
 
                                                                         <span class="regular-price">£24.00</span>

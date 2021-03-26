@@ -23,8 +23,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/';
     public const ADMIN = '/admin';
-    public const VERIFIED = '/verify';
-
+    public const VERIFIED='/verify' ;
     /**
      * Define your route model bindings, pattern filters, etc.
      *
@@ -48,7 +47,7 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
-        $this->mapSiteRoutes();
+        $this->mapFrontRoutes();
 
         $this->mapAdminRoutes();
 
@@ -68,11 +67,11 @@ class RouteServiceProvider extends ServiceProvider
             ->group(base_path('routes/web.php'));
     }
 
-    protected function mapSiteRoutes()
+    protected function mapFrontRoutes()
     {
         Route::middleware('web')
             ->namespace($this->namespace)
-            ->group(base_path('routes/site.php'));
+            ->group(base_path('routes/front.php'));
     }
 
     protected function mapAdminRoutes()

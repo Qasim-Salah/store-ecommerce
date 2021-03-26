@@ -3,27 +3,23 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ProfileRequest;
+use App\Http\Requests\Dashboard\ProfileRequest;
 use App\Models\Admin as AdminModel;
-use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
     public function edit()
     {
-
-        $admin = AdminModel::find(auth('admin')->user()->id);
+        $admin = AdminModel::findorfail(auth('admin')->user()->id);
 
         return view('dashboard.profile.edit', compact('admin'));
-
     }
 
     public function update(ProfileRequest $request)
     {
         //validate
         // db
-        $admin = AdminModel::find(auth('admin')->user()->id);
-
+        $admin = AdminModel::findorfail(auth('admin')->user()->id);
 
         if ($request->filled('password')) {
             $request->merge(['password' => bcrypt($request->password)]);

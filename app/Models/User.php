@@ -10,20 +10,17 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    protected $fillable = [
-        'name', 'password','mobile',
-    ];
+    protected $table = 'users';
 
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    protected $fillable = ['name', 'mobile', 'password',];
 
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected $hidden = ['password', 'remember_token',];
 
-    public function codes() {
-        return $this -> hasMany(User_verfication::class,'user_id');
+    protected $casts = ['email_verified_at' => 'datetime',];
+
+    public function codes()
+    {
+        return $this->hasMany(User_verfication::class, 'user_id');
     }
 
     public function wishlist()

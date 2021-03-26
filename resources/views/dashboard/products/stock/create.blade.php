@@ -1,4 +1,6 @@
 @extends('layouts.admin')
+@section('title')
+    المستودع@endsection
 @section('content')
 
     <div class="app-content content">
@@ -85,7 +87,7 @@
                                                 </div>
                                                 <div class="row">
                                                     <!-- QTY  -->
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label for="projectinput1">حالة المنتج
                                                             </label>
@@ -100,7 +102,7 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6" style="display:none" id="qtyDiv">
+                                                    <div class="col-md-12" style="display:none" id="qtyDiv">
                                                         <div class="form-group">
                                                             <label for="projectinput1">الكمية
                                                             </label>

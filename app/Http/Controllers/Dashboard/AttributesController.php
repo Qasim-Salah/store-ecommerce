@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\AttributeRequest;
+use App\Http\Requests\Dashboard\AttributeRequest;
 use App\Models\Attribute as AttributeModel;
 use App\Models\Brand as BrandModel;
 use Illuminate\Support\Facades\DB;
@@ -24,25 +24,25 @@ class AttributesController extends Controller
 
     public function store(AttributeRequest $request)
     {
+        try {
 
-        DB::beginTransaction();
-        $attribute = AttributeModel::create([]);
+            DB::beginTransaction();
+            $attribute = AttributeModel::create([]);
 
-        //save translations
-        $attribute->name = $request->name;
-        $attribute->save();
-        DB::commit();
-        return redirect()->route('admin.attributes')->with(['success' => 'تم ألاضافة بنجاح']);
-
+            //save translations
+            $attribute->name = $request->name;
+            $attribute->save();
+            DB::commit();
+            return redirect()->route('admin.attributes')->with(['success' => 'تم ألاضافة بنجاح']);
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            return redirect()->route('admin.attributes.create')->with(['error' => 'حدث خطأ ما']);
+        }
     }
 
     public function edit($id)
     {
-
-        $attribute = AttributeModel::find($id);
-
-        if (!$attribute)
-            return redirect()->route('admin.attributes')->with(['error' => 'هذا العنصر  غير موجود ']);
+        $attribute = AttributeModel::findordfail($id);
 
         return view('dashboard.attributes.edit', compact('attribute'));
 
@@ -52,11 +52,7 @@ class AttributesController extends Controller
     {
         try {
 
-            $attribute = AttributeModel::find($id);
-
-            if (!$attribute)
-                return redirect()->route('admin.attributes')->with(['error' => 'هذا العنصر غير موجود']);
-
+            $attribute = AttributeModel::findorfail($id);
 
             DB::beginTransaction();
 
@@ -77,20 +73,14 @@ class AttributesController extends Controller
 
     public function destroy($id)
     {
-        try {
-            //get specific categories and its translations
-            $brand = BrandModel::find($id);
+        //get specific categories and its translations
+        $attribute = BrandModel::findorfail($id);
 
-            if (!$brand)
-                return redirect()->route('admin.brands')->with(['error' => 'هذا الماركة غير موجود ']);
+        if ($attribute->delete())
+            return redirect()->route('admin.attributes')->with(['success' => 'تم  الحذف بنجاح']);
 
-            $brand->delete();
+        return redirect()->route('admin.attributes')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
 
-            return redirect()->route('admin.brands')->with(['success' => 'تم  الحذف بنجاح']);
-
-        } catch (\Exception $ex) {
-            return redirect()->route('admin.brands')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
-        }
     }
 
 }

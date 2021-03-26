@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Http\Controllers\Controller;
+use  App\Http\Controllers\Controller;
 
-use App\Http\Requests\TagsRequest;
+use App\Http\Requests\Dashboard\TagsRequest;
 use App\Models\Tag as TagModel;
 use Illuminate\Support\Facades\DB;
 
-class tagsController extends Controller
+class TagsController extends Controller
 {
     public function index()
     {
@@ -21,14 +21,15 @@ class tagsController extends Controller
         return view('dashboard.tags.create');
     }
 
-
     public function store(TagsRequest $request)
     {
         try {
 
             DB::beginTransaction();
 
-            $tag = TagModel::create(['slug' => $request->slug]);
+            $tag = TagModel::create([
+                'slug' => $request->slug
+            ]);
 
             //save translations
             $tag->name = $request->name;
@@ -44,10 +45,7 @@ class tagsController extends Controller
 
     public function edit($id)
     {
-        $tag = TagModel::find($id);
-
-        if (!$tag)
-            return redirect()->route('admin.tags')->with(['error' => 'هذا الماركة غير موجود ']);
+        $tag = TagModel::findorfail($id);
 
         return view('dashboard.tags.edit', compact('tag'));
 
@@ -57,10 +55,7 @@ class tagsController extends Controller
     {
         try {
 
-            $tag = TagModel::find($id);
-
-            if (!$tag)
-                return redirect()->route('admin.tags')->with(['error' => 'هذا الماركة غير موجود']);
+            $tag = TagModel::findorfail($id);
 
             DB::beginTransaction();
 
@@ -82,20 +77,14 @@ class tagsController extends Controller
 
     public function destroy($id)
     {
-
         //get specific categories and its translations
-        $tags = TagModel::find($id);
+        $tags = TagModel::findorfail($id);
 
-        if (!$tags)
-            return redirect()->route('admin.tags')->with(['error' => 'هذا الماركة غير موجود ']);
-
-        if ($tags->delete()) {
-
+        if ($tags->delete())
             return redirect()->route('admin.tags')->with(['success' => 'تم  الحذف بنجاح']);
 
-        } else {
-            return redirect()->route('admin.tags')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
-        }
+        return redirect()->route('admin.tags')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
     }
+
 
 }

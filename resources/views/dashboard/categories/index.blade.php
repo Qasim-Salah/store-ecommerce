@@ -1,4 +1,9 @@
 @extends('layouts.admin')
+
+@section('title')
+
+    الاقسام
+@endsection
 @section('content')
 
     <div class="app-content content">
@@ -62,17 +67,18 @@
                                                     <tr>
                                                         <td>{{$category -> name}}</td>
                                                         <td>{{$category -> _parent -> name  ?? '--' }}</td>
-                                                        <td>{{$category -> slug}}</td>
+                                                        <td></td>
                                                         <td>{{$category -> getActive()}}</td>
-                                                        <td><img style="width: 150px; height: 100px;" src=" "></td>
+                                                        <td><img style="width: 150px; height: 100px;"
+                                                                 src="{{$category -> photo}}"></td>
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
-                                                                <a href="{{route('admin.mainCategories.edit',$category -> id)}}"
+                                                                <a href="{{route('admin.Categories.edit',$category -> id)}}"
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">تعديل</a>
 
 
-                                                                <a href="{{route('admin.mainCategories.delete',$category -> id)}}"
+                                                                <a href="{{route('admin.Categories.delete',$category -> id)}}"
                                                                    class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">حذف</a>
                                                             </div>
                                                         </td>
@@ -82,6 +88,7 @@
                                             </tbody>
                                         </table>
                                         <div class="justify-content-center d-flex">
+                                            {!! $categories->appends(request()->input())->links() !!}
                                         </div>
                                     </div>
                                 </div>

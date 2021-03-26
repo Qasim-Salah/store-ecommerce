@@ -1,4 +1,10 @@
 @extends('layouts.admin')
+
+
+@section('title')
+
+    الماركات التجارية
+@endsection
 @section('content')
 
     <div class="app-content content">
@@ -78,6 +84,8 @@
                                             </tbody>
                                         </table>
                                         <div class="justify-content-center d-flex">
+                                            {!! $brands->appends(request()->input())->links() !!}
+
                                         </div>
                                     </div>
                                 </div>

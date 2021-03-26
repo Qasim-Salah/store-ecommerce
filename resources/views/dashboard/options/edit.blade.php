@@ -1,5 +1,6 @@
-
 @extends('layouts.admin')
+@section('title')
+    تعديل قيم المنتج@endsection
 @section('content')
 
     <div class="app-content content">
@@ -53,7 +54,8 @@
 
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i> {{$option -> name}} </h4>
+                                                <h4 class="form-section"><i class="ft-home"></i> {{$option -> name}}
+                                                </h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -92,7 +94,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> اختر ألمنتج
                                                             </label>
-                                                            <select name="product_id" class="select2 form-control" >
+                                                            <select name="product_id" class="select2 form-control">
                                                                 <optgroup label="من فضلك أختر المنتج ">
                                                                     @if($products && $products -> count() > 0)
                                                                         @foreach($products as $product)
@@ -114,7 +116,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> اختر خاصيه
                                                             </label>
-                                                            <select name="attribute_id" class="select2 form-control" >
+                                                            <select name="attribute_id" class="select2 form-control">
                                                                 <optgroup label="من فضلك أختر قيمه">
                                                                     @if($attributes && $attributes -> count() > 0)
                                                                         @foreach($attributes as $attribute)

@@ -1,4 +1,9 @@
 @extends('layouts.admin')
+
+@section('title')
+    قيم المنتجات
+@endsection
+
 @section('content')
 
     <div class="app-content content">
@@ -68,8 +73,6 @@
                                                                  aria-label="Basic example">
                                                                 <a href="{{route('admin.options.edit',$option -> id)}}"
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">تعديل</a>
-                                                                <a href=""
-                                                                   class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">حذف</a>
                                                             </div>
                                                         </td>
                                                     </tr>

@@ -9,6 +9,8 @@ class Tag extends Model
 {
     use Translatable;
 
+    protected $table = 'tags';
+
     protected $with = ['translations'];
 
     protected $translatedAttributes = ['name'];

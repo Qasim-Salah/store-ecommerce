@@ -9,7 +9,7 @@
                     <div class="col-md-5 col-sm-5 divide-right">
                         <div class="images-container bottom_thumb">
                             <div class="product-cover">
-                                <img class="js-qv-product-cover img-fluid" src="{{$product -> images[0] -> photo ?? ''}}" alt="" title="" style="width:100%;" itemprop="image">
+                                <img class="js-qv-product-cover img-fluid" src="{{$product ->  photo ?? ''}}" alt="" title="" style="width:100%;" itemprop="image">
                                 <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
                                     <i class="fa fa-expand"></i>
                                 </div>

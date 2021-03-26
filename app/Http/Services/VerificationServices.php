@@ -1,11 +1,12 @@
 <?php
 
+
 namespace App\Http\Services;
 
-use App\Models\User;
+
+use App\Models\User as UserModel;
 use App\Models\User_verfication;
 use Illuminate\Support\Facades\Auth;
-
 
 class VerificationServices
 {
@@ -24,8 +25,8 @@ class VerificationServices
 
     public function getSMSVerifyMessageByAppName( $code)
     {
-            $message = " is your verification code for your account";
-             return $code.$message;
+        $message = " is your verification code for your account";
+        return $code.$message;
     }
 
 
@@ -35,7 +36,7 @@ class VerificationServices
             $verificationData = User_verfication::where('user_id',Auth::id()) -> first();
 
             if($verificationData -> code == $code){
-                User::whereId(Auth::id()) -> update(['email_verified_at' => now()]);
+                UserModel::whereId(Auth::id()) -> update(['email_verified_at' => now()]);
                 return true;
             }else{
                 return false;
@@ -49,5 +50,4 @@ class VerificationServices
     {
         User_verfication::where('code',$code) -> delete();
     }
-
 }

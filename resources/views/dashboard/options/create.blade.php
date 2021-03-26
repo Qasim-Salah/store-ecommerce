@@ -1,5 +1,9 @@
 
 @extends('layouts.admin')
+
+@section('title')
+    قيم المنتجات
+@endsection
 @section('content')
 
     <div class="app-content content">

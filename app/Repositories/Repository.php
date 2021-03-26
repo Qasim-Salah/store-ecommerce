@@ -33,14 +33,14 @@ class Repository implements RepositoryInterface
         return $record->update($data);
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         return $this->model->destroy($id);
     }
 
-    public function show($id)
+    public function edit($id)
     {
-        return $this->model-findOrFail($id);
+        return $this->model->findOrFail($id);
     }
 
     // Get the associated model

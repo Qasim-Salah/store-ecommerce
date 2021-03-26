@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="24c03c4a-c2f9-4de1-ac8e-f0c2a3c1c180" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Enumerations/CategoryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ecommerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MainCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MainCategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SliderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Dashboard/SliderImagesRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/VerificationRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/SMSGateways/VictoryLinkSms.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/SMSServices.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/VerificationServices.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/User_verfication.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/p8cwJh82ad6r1d1ZZxZvhLXJU3WvBoaTBJx8gZQd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/zX7ellHeYeb00pJVhtqw6WexUjP7lgnzmin4TBr2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/sliders/images/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/VerificationCodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/VerificationCodeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Slider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +46,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="PerforceDirect.Settings">
+    <option name="ENABLED" value="false" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -140,6 +160,11 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
       <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
       <path value="$PROJECT_DIR$/vendor/spatie/enum" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-multitenancy" />
     </include_path>
   </component>
   <component name="ProjectId" id="1omxVeoXT4M4TX7aSKQeWoCGluW" />
@@ -148,6 +173,7 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -155,17 +181,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
+    <property name="full.screen.before.presentation.mode" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Requests" />
-      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard" />
+      <recent name="C:\xampp\htdocs\ecommerce\resources\views" />
+      <recent name="C:\xampp\htdocs\ecommerce" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http" />
+      <recent name="C:\xampp\htdocs\ecommerce\resources\views\front\includes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Requests\Dashboard" />
       <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers\Dashboard" />
-      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard\categories" />
-      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard\profile" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Enums" />
     </key>
   </component>
   <component name="RunManager">
@@ -186,6 +221,32 @@
       <workItem from="1613907933959" duration="6473000" />
       <workItem from="1614243547296" duration="6288000" />
       <workItem from="1614260739020" duration="84779000" />
+      <workItem from="1615498490990" duration="2306000" />
+      <workItem from="1615638936078" duration="9899000" />
+      <workItem from="1615675541471" duration="23614000" />
+      <workItem from="1615899180428" duration="12000" />
+      <workItem from="1615976729597" duration="4900000" />
+      <workItem from="1615983007810" duration="116000" />
+      <workItem from="1615983168207" duration="89000" />
+      <workItem from="1615983289959" duration="182000" />
+      <workItem from="1615983633359" duration="10914000" />
+      <workItem from="1616049529609" duration="625000" />
+      <workItem from="1616075252523" duration="95000" />
+      <workItem from="1616075351166" duration="1994000" />
+      <workItem from="1616086373313" duration="1477000" />
+      <workItem from="1616089891141" duration="10290000" />
+      <workItem from="1616169250717" duration="8543000" />
+      <workItem from="1616248812186" duration="12802000" />
+      <workItem from="1616335847410" duration="3402000" />
+      <workItem from="1616342179370" duration="3480000" />
+      <workItem from="1616419913005" duration="12228000" />
+      <workItem from="1616433494647" duration="2916000" />
+      <workItem from="1616439425600" duration="329000" />
+      <workItem from="1616439784401" duration="1469000" />
+      <workItem from="1616442348839" duration="3962000" />
+      <workItem from="1616489867153" duration="782000" />
+      <workItem from="1616496007299" duration="20493000" />
+      <workItem from="1616592829530" duration="4273000" />
     </task>
     <servers />
   </component>
@@ -206,5 +267,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

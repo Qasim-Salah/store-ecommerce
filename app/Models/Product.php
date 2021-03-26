@@ -10,15 +10,45 @@ class Product extends Model
 {
     use Translatable, SoftDeletes;
 
+    protected $table = 'products';
+
     protected $with = ['translations'];
 
-    protected $guarded = [];
+    protected $fillable = [
+        'brand_id',
+        'slug',
+        'sku',
+        'price',
+        'photo',
+        'special_price',
+        'special_price_type',
+        'special_price_start',
+        'special_price_end',
+        'selling_price',
+        'manage_stock',
+        'qty',
+        'in_stock',
+        'is_active'
+    ];
+    protected $casts = [
+        'manage_stock' => 'boolean',
+        'in_stock' => 'boolean',
+        'is_active' => 'boolean',
+    ];
 
-    protected $casts = ['manage_stock' => 'boolean', 'in_stock' => 'boolean', 'is_active' => 'boolean',];
+    protected $dates = [
+        'special_price_start',
+        'special_price_end',
+        'start_date',
+        'end_date',
+        'deleted_at',
+    ];
 
-    protected $dates = ['special_price_start', 'special_price_end', 'start_date', 'end_date', 'deleted_at',];
-
-    protected $translatedAttributes = ['name', 'description', 'short_description'];
+    protected $translatedAttributes = [
+        'name',
+        'description',
+        'short_description'
+    ];
 
     public function brand()
     {
@@ -50,11 +80,6 @@ class Product extends Model
         return $this->hasMany(Option::class, 'product_id');
     }
 
-    public function images()
-    {
-        return $this->hasMany(Image::class, 'product_id');
-    }
-
     public function hasStock($quantity)
     {
         return $this->qty >= $quantity;
@@ -74,6 +99,12 @@ class Product extends Model
     {
         return $total = $this->special_price ?? $this->price;
 
+    }
+
+    public function getPhotoAttribute($val)
+    {
+
+        return $val ? asset('assets/images/products/' . $val) : '';
     }
 
 }

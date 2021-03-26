@@ -6,14 +6,13 @@ namespace App\Http\Services\SMSGateways;
 
 use GuzzleHttp\Client;
 
-
 class VictoryLinkSms
 {
     public $client;
 
     public function __construct()
     {
-        if (! $this->client) {
+        if (!$this->client) {
             $this->client = new Client();
         }
     }
@@ -32,10 +31,10 @@ class VictoryLinkSms
         try {
             $smsURL = "https://smsvas.vlserv.com/KannelSending/service.asmx/SendSMS";
 
-            $response = $this->client->post($smsURL, ['form_params' => $params ]);
+            $response = $this->client->post($smsURL, ['form_params' => $params]);
             $content = $response->getBody();
 
-            $xml = (array) simplexml_load_string($content);
+            $xml = (array)simplexml_load_string($content);
 
             if ($xml[0] == '0') {
                 return true;
@@ -50,13 +49,6 @@ class VictoryLinkSms
         }
     }
 
-    /**
-     * SET YOUR CLIENT TO MOVE FORWARD TO SEND A NEW SMS.
-     *
-     * @param Client $client
-     *
-     * @return $this
-     */
     public function setClient(Client $client)
     {
         $this->client = $client;

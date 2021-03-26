@@ -16,6 +16,7 @@ class AdminDatabaseSeeder extends Seeder
             'name' => 'Qasim Salah',
             'email' => 'Qasim@gmail.com',
             'password' => bcrypt('Qasim Salah'),
+            'role_id' => 1,
         ]);
     }
 }

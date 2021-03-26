@@ -9,13 +9,14 @@ class Attribute extends Model
 {
     use Translatable;
 
-    protected $guarded = [];
+    protected $table = 'attributes';
 
+    protected $fillable= [''];
 
     public $translatedAttributes = ['name'];
 
-
-    public  function options(){
-        return $this->hasMany(Option::class,'attribute_id');
+    public function options()
+    {
+        return $this->hasMany(Option::class, 'attribute_id');
     }
 }
