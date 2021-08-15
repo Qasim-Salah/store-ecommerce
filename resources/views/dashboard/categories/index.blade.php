@@ -67,7 +67,7 @@
                                                     <tr>
                                                         <td>{{$category -> name}}</td>
                                                         <td>{{$category -> _parent -> name  ?? '--' }}</td>
-                                                        <td></td>
+                                                        <td> {{$category->slug}}</td>
                                                         <td>{{$category -> getActive()}}</td>
                                                         <td><img style="width: 150px; height: 100px;"
                                                                  src="{{$category -> photo}}"></td>

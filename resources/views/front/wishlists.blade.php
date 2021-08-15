@@ -171,7 +171,8 @@
                                                                         class="novicon-cart"></i><span>Add to cart</span></a>
                                                             </form>
 
-                                                            <a class="removeFromWishlist addToWishlist  wishlistProd_22" href="#"
+                                                            <a class="removeFromWishlist addToWishlist  wishlistProd_22"
+                                                               href="#"
                                                                data-product-id="{{$product -> id}}">
                                                                 <i class="fa fa-heart"></i>
                                                                 <span>remove to Wishlist</span>
@@ -224,8 +225,8 @@
     </div>
 
     @include('front.includes.not-logged')
-    @include('front.includes.alert')   <!-- we can use only one with dynamic text -->
-    @include('front.includes.alert2')
+    @include('front.includes.alerts.alert')   <!-- we can use only one with dynamic text -->
+    @include('front.includes.alerts.alert2')
 
 @stop
 
@@ -248,7 +249,7 @@
             e.preventDefault();
 
             @guest()
-                $('.not-loggedin-modal').css('display','block');
+            $('.not-loggedin-modal').css('display', 'block');
             @endguest
 
 

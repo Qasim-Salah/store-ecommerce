@@ -13,7 +13,7 @@ class AttributesController extends Controller
 
     public function index()
     {
-        $attributes = AttributeModel::orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
+        $attributes = AttributeModel::latest()->paginate(PAGINATION_COUNT);
         return view('dashboard.attributes.index', compact('attributes'));
     }
 

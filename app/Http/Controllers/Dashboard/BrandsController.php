@@ -7,12 +7,13 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\BrandRequest;
 use App\Models\Brand as BrandModel;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class BrandsController extends Controller
 {
     public function index()
     {
-        $brands = BrandModel::orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
+        $brands = BrandModel::latest()->paginate(PAGINATION_COUNT);
         return view('dashboard.brands.index', compact('brands'));
     }
 
@@ -103,7 +104,9 @@ class BrandsController extends Controller
     public function destroy($id)
     {
         $brand = BrandModel::findorfail($id);
-
+        $image = Str::after($brand->photo, 'assets/images/brands');
+        $image = public_path('assets/images/brands' . $image);
+        unlink($image); //delete from folder
         if ($brand->delete())
 
             return redirect()->route('admin.brands')->with(['success' => 'تم  الحذف بنجاح']);

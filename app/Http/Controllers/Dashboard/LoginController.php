@@ -4,11 +4,15 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\AdminLoginRequest;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
     public function login()
     {
+        if (Auth::guard('admin')->check()) {
+            return redirect()->route('admin.dashboard');
+        }
         return view('dashboard.auth.login');
     }
 

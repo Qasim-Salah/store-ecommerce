@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Http\Dashboard\Requests\ShippingsRequest;
+use App\Http\Requests\Dashboard\ShippingsRequest;
 use App\Models\Setting as SettingModel;
 use Illuminate\Support\Facades\DB;
 

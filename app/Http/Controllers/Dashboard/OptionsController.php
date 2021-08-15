@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\OptionsRequest;
 use App\Models\Attribute as AttributeModel;
-use App\Models\Brand as BrandModel;
-use App\Models\Category as CategoryModel;
 use App\Models\Option as OptionModel;
 use App\Models\Product as ProductModel;
 use Illuminate\Support\Facades\DB;

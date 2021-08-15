@@ -158,7 +158,7 @@
                         </li>
                     </ul>
             @endcan
-            @can('slider')
+            @can('sliders')
 
                 <li><a class="menu-item" href="#"
                        data-i18n="nav.templates.vert.main"> {{__('admin/sidebar.main slider')}} </a>

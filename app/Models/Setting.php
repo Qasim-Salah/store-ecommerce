@@ -29,13 +29,12 @@ class Setting extends Model
     //  defaultlocal , ar
     public static function set($key, $value)
     {
-        if ($key === 'translatable') {
+        if ($key === 'translatable')
             return static::setTranslatableSettings($value);
-        }
 
-        if (is_array($value)) {
+        if (is_array($value))
             $value = json_encode($value);
-        }
+
 
         static::updateOrCreate(['key' => $key], ['plain_value' => $value]);
     }

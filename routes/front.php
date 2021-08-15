@@ -20,13 +20,12 @@ Route::group([
 ], function () {
 
 
-    Route::group(['namespace' => 'Front',], function () {
+    Route::group(['namespace' => 'Front', /*'middleware' => 'guest'*/], function () {
         //guest  user
-        Route::get('fat','PaymentController@fatoorah');
-        route::get('/', 'HomeController@home')->name('home')->middleware('VerifiedUser');
+        Route::get('fat', 'PaymentController@fatoorah');
+        route::get('/', 'HomeController@home')->name('home')/*->middleware('VerifiedUser')*/;
         route::get('category/{slug}', 'CategoryController@productsBySlug')->name('category');
         route::get('product/{slug}', 'ProductController@productsBySlug')->name('product.details');
-
 
 
         #######   Cart routes ##########
@@ -53,8 +52,8 @@ Route::group([
         Route::get('verify', 'VerificationCodeController@getVerifyPage')->name('get.verification.form');
         Route::get('products/{productId}/reviews', 'ProductReviewController@index')->name('products.reviews.index');
         Route::post('products/{productId}/reviews', 'ProductReviewController@store')->name('products.reviews.store');
-        Route::get('payment/{amount}', 'PaymentController@getPayments') -> name('payment');
-        Route::post('payment', 'PaymentController@processPayment') -> name('payment.process');
+        Route::get('payment/{amount}', 'PaymentController@getPayments')->name('payment');
+        Route::post('payment', 'PaymentController@processPayment')->name('payment.process');
 
     });
 
@@ -64,5 +63,11 @@ Route::group(['namespace' => 'Front', 'middleware' => 'auth'], function () {
     Route::post('wishlist', 'WishlistController@store')->name('wishlist.store');
     Route::delete('wishlist', 'WishlistController@destroy')->name('wishlist.destroy');
     Route::get('wishlist/products', 'WishlistController@index')->name('wishlist.products.index');
+
+    Route::group(['prefix' => 'front/profile'], function () {
+        Route::get('edit', 'ProfileController@edit')->name('front.edit.profile');
+        Route::put('update', 'ProfileController@update')->name('front.update.profile');
+    });
+
 });
 

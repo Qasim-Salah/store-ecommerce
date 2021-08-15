@@ -32,10 +32,11 @@
                         <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                 <span class="mr-1">مرجبا
                   <span
-                      class="user-name text-bold-700">{{auth('admin')->user()->name}}</span>
+                      class="user-name text-bold-700">{{ auth('admin')->user()->name}}</span>
                 </span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{route('edit.profile')}}"><i
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item"
+                                                                          href="{{route('edit.profile')}}"><i
                                     class="ft-user"></i> تعديل الملف الشحصي </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{route('admin.logout')}}"><i class="ft-power"></i> تسجيل

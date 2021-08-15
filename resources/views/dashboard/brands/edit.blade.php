@@ -55,8 +55,7 @@
                                             <input name="id" value="{{$brand -> id}}" type="hidden">
                                             <div class="form-group">
                                                 <div class="text-center">
-                                                    <img
-                                                        src="{{$brand  -> photo}}"
+
                                                         class="rounded-circle  height-250" alt="صورة القسم  ">
                                                 </div>
                                             </div>

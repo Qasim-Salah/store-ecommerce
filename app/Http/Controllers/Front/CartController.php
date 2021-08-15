@@ -13,30 +13,14 @@ use Illuminate\Support\Facades\Input;
 
 class CartController extends Controller
 {
-    /**
-     * Instance of Basket.
-     *
-     * @var Basket
-     */
     protected $basket;
     protected $id;
 
-    /**
-     * Create a new CartController instance.
-     *
-     * @param Basket $basket
-     * @param Product $product
-     */
     public function __construct(Basket $basket)
     {
         $this->basket = $basket;
 
     }
-
-    /**
-     * Show all items in the Basket.
-     *
-     */
 
     public function index()
     {
@@ -44,14 +28,6 @@ class CartController extends Controller
         return view('front.cart.index',compact('basket'));
     }
 
-    /**
-     * Add items to the Basket.
-     *
-     * @param $slug
-     * @param $quantity
-     *
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
-     */
     public function store(Request $request)
     {
          $slug =$request -> product_slug ;
@@ -66,15 +42,6 @@ class CartController extends Controller
         return 'Product added successfully to the card ';
     }
 
-    /**
-     * Update the Basket item with given slug.
-     *
-     * @param         $slug
-     * @param Request $request
-     *
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
-     * @throws \App\Exceptions\QuantityExceededException
-     */
     public function update($slug, Request $request)
     {
         $_product = Product::where('slug', $slug)->firstOrFail();

@@ -19,7 +19,7 @@ class ProductsController extends Controller
 
     public function index()
     {
-        $products = ProductModel::select('id', 'slug', 'photo', 'price', 'created_at')->orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
+        $products = ProductModel::select('id', 'slug', 'photo', 'price', 'created_at')->latest()->paginate(PAGINATION_COUNT);
         return view('dashboard.products.general.index', compact('products'));
     }
 
@@ -36,11 +36,13 @@ class ProductsController extends Controller
     {
         try {
             DB::beginTransaction();
+
             if (!$request->has('is_active')) {
                 $request->request->add(['is_active' => ProductsType::UnActiveProduct]);
             } else {
                 $request->request->add(['is_active' => ProductsType::ActiveProduct]);
             }
+
             $fileName = "";
             if ($request->has('photo')) {
                 ###helper###

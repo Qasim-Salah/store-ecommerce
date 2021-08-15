@@ -12,7 +12,7 @@ class TagsController extends Controller
 {
     public function index()
     {
-        $tags = TagModel::orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
+        $tags = TagModel::latest()->paginate(PAGINATION_COUNT);
         return view('dashboard.tags.index', compact('tags'));
     }
 

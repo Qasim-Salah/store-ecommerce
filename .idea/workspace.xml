@@ -5,27 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24c03c4a-c2f9-4de1-ac8e-f0c2a3c1c180" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SliderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCode.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Dashboard/SliderImagesRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/VerificationRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/SMSGateways/VictoryLinkSms.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/SMSServices.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Services/VerificationServices.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/User_verfication.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/p8cwJh82ad6r1d1ZZxZvhLXJU3WvBoaTBJx8gZQd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/zX7ellHeYeb00pJVhtqw6WexUjP7lgnzmin4TBr2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/sliders/images/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/fileColors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/ProfileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ProfileRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sliders/UX1JIcwaejjZfnTyYBbB9Tj0Wtnh1Sfv2RJP0Xig.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sliders/YB4nC24MjvS5e8zBSOzmgHZVQKRjOwJupemqzLiC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sliders/h45argTBfpFhYphyiMOTqySV8l6p4EL0qAsFnpjj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/profile/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Basket/Basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Basket/Basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/AttributesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/AttributesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/BrandsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/BrandsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/OptionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/OptionsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/VerificationCodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/VerificationCodeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Slider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SettingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SettingsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/tagsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/tagsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Setting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/admin/vendors/css/charts/chartist.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/vendors/css/charts/chartist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/brands/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/brands/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/cart/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/cart/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/includes/header-bottom.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/header-bottom.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/includes/header-center.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/header-center.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/includes/header-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/header-top.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/wishlists.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/wishlists.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/front.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/front.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +57,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <interpreter composer="composer" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -178,29 +203,35 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ecommerce\resources\views" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Requests" />
+      <recent name="C:\xampp\htdocs\ecommerce\resources\views\front" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers\Front" />
       <recent name="C:\xampp\htdocs\ecommerce" />
-      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers" />
-      <recent name="C:\xampp\htdocs\ecommerce\app\Http" />
-      <recent name="C:\xampp\htdocs\ecommerce\resources\views\front\includes" />
+      <recent name="C:\xampp\htdocs\ecommerce\resources\views\layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers\Front" />
+      <recent name="C:\xampp\htdocs\ecommerce\resources\views\front" />
       <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers" />
       <recent name="C:\xampp\htdocs\ecommerce\app\Http\Requests\Dashboard" />
       <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers\Dashboard" />
-      <recent name="C:\xampp\htdocs\ecommerce\app\Http" />
-      <recent name="C:\xampp\htdocs\ecommerce\app\Enums" />
     </key>
   </component>
   <component name="RunManager">
@@ -247,6 +278,26 @@
       <workItem from="1616489867153" duration="782000" />
       <workItem from="1616496007299" duration="20493000" />
       <workItem from="1616592829530" duration="4273000" />
+      <workItem from="1616759684460" duration="55000" />
+      <workItem from="1616767522648" duration="10907000" />
+      <workItem from="1616925981362" duration="12524000" />
+      <workItem from="1617091864110" duration="594000" />
+      <workItem from="1617127478407" duration="1551000" />
+      <workItem from="1617188210969" duration="2311000" />
+      <workItem from="1617205488839" duration="602000" />
+      <workItem from="1617263221537" duration="6599000" />
+      <workItem from="1617437167740" duration="5959000" />
+      <workItem from="1617536322306" duration="15647000" />
+      <workItem from="1617698525743" duration="3544000" />
+      <workItem from="1617792966644" duration="14470000" />
+      <workItem from="1617876534767" duration="9427000" />
+      <workItem from="1623342313752" duration="1712000" />
+      <workItem from="1624622232734" duration="71000" />
+      <workItem from="1624724868355" duration="10605000" />
+      <workItem from="1624814261008" duration="115000" />
+      <workItem from="1624814388709" duration="183000" />
+      <workItem from="1624814596099" duration="7172000" />
+      <workItem from="1624898655957" duration="10016000" />
     </task>
     <servers />
   </component>

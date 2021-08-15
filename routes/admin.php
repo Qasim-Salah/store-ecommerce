@@ -99,7 +99,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
         ################################## end options    #######################################
 
         ################################## sliders ######################################
-        Route::group(['prefix' => 'sliders', 'middleware' => 'can:slider'], function () {
+        Route::group(['prefix' => 'sliders', 'middleware' => 'can:sliders'], function () {
             Route::get('/', 'SliderController@index')->name('admin.sliders.create');
             Route::post('images', 'SliderController@store')->name('admin.sliders.images.store');
         });
@@ -123,7 +123,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
         ######################################end admin######################################
     });
 //    'middleware' => 'guest:admin'
-    Route::group(['prefix' => 'admin', 'namespace' => 'Dashboard'], function () {
+    Route::group(['prefix' => 'admin', 'namespace' => 'Dashboard', ], function () {
 
         Route::get('/login', 'LoginController@login')->name('admin.login');
         Route::post('/login', 'LoginController@postLogin')->name('admin.post.login');
