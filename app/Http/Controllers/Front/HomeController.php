@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 
+use App\Enums\ProductsType;
 use App\Models\Category as CategoryModel;
 use App\Models\Product as ProductModel;
 use App\Models\Slider as SliderModel;
@@ -15,12 +16,13 @@ class HomeController extends Controller
     {
         $data = [];
         $data['sliders'] = SliderModel::get(['photo']);
+        $data['products'] = ProductModel::select('photo', 'price')->where('is_active', ProductsType::ActiveProduct)->latest()->get();
         $data['categories'] = CategoryModel::parent()->select('id', 'slug', 'photo')->with(['childrens' => function ($q) {
             $q->select('id', 'parent_id', 'slug', 'photo');
             $q->with(['childrens' => function ($qq) {
                 $qq->select('id', 'parent_id', 'slug', 'photo');
             }]);
-        }])->orderBy('id', 'DESC')->get();
+        }])->latest()->get();
 
 
         return view('front.home', $data);

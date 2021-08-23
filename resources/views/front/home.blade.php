@@ -51,28 +51,33 @@
     </div>
 @stop
 @section('content')
-{{--    <div id="main">--}}
-{{--        <section id="content" class="page-home pagehome-three">--}}
-{{--            <div class="container">--}}
-{{--                <div class="row">--}}
-{{--                    <div class="nov-row spacing-30 mt-15 col-lg-12 col-xs-12">--}}
-{{--                        <div class="nov-row-wrap row">--}}
-{{--                            <div class="nov-image col-lg-4 col-md-4">--}}
-{{--                                <div class="block">--}}
-{{--                                    <div class="block_content">--}}
-{{--                                        <div class="effect">--}}
-{{--                                            <a href="#"> <img class="img-fluid"--}}
-{{--                                                              src="assets/images/1.jpg"--}}
-{{--                                                              alt="banner3-1" title="banner3-1"></a>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </section>--}}
-{{--    </div>--}}
+    @isset($products)
+        @foreach($products as $product)
+            <div id="main">
+                <section id="content" class="page-home pagehome-three">
+                    <div class="container">
+                        <div class="row">
+                            <div class="nov-row spacing-30 mt-15 col-lg-12 col-xs-12">
+                                <div class="nov-row-wrap row">
+                                    <div class="nov-image col-lg-4 col-md-4">
+                                        <div class="block">
+                                            <div class="block_content">
+                                                <div class="effect">
 
+                                                    <a href="#"> <img style="height: 250px; width: 250px" class="img-fluid"
+                                                                      src="{{$product->photo}}"
+                                                                      alt="banner3-1" title="banner3-1"></a>
+                                                    {{$product->price}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        @endforeach
+    @endisset
 @stop

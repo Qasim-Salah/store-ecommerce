@@ -37,17 +37,16 @@ class ProductsController extends Controller
         try {
             DB::beginTransaction();
 
-            if (!$request->has('is_active')) {
+            if (!$request->has('is_active'))
                 $request->request->add(['is_active' => ProductsType::UnActiveProduct]);
-            } else {
-                $request->request->add(['is_active' => ProductsType::ActiveProduct]);
-            }
+
+            $request->request->add(['is_active' => ProductsType::ActiveProduct]);
+
 
             $fileName = "";
-            if ($request->has('photo')) {
+            if ($request->has('photo'))
                 ###helper###
                 $fileName = uploadImage('products', $request->photo);
-            }
 
             $product = ProductModel::create([
                 'slug' => $request->slug,
